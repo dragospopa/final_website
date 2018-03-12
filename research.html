@@ -77,13 +77,11 @@
                 </div>
                 <div class="social-holder">
                     <div class="social-list">
-                        <a href="#client"><i class="fa fa-user"></i></a>
-                        <a href="#abstract"><i class="fa fa-exclamation-triangle"></i></a>
-                        <a href="#current"><i class="fa fa-flag-checkered"></i></a>
-                        <a href="#solution"><i class="fa fa-check-square"></i></a>
-                        <a href="#features"><i class="fa fa-wrench"></i></a>
-                        <a href="#demo"><i class="fa fa-play"></i></a>
-                        <a href="#team"><i class="fa fa-users"></i></a>
+                        <a href="#existing"><i class="fa fa-archive"></i></a>
+                        <a href="#tools"><i class="fa fa-wrench"></i></a>
+                        <a href="#web"><i class="fa fa-edge"></i></a>
+                        <a href="#database"><i class="fa fa-database"></i></a>
+                        <a href="#server"><i class="fa fa-server"></i></a>
                     </div>
                 </div>
                 <div class="fixed scroll-top"><i class="fa fa-caret-square-o-up" aria-hidden="true"></i></div>
@@ -112,72 +110,51 @@
                     <div class="entry-content">
                             
                         <div class="content-wrap content-860 center-relative ">
-                            <h2 id="client">The Client</h2>
-                            
-                            <p class="wrap-blockquote"> Our project client is the Urban Dynamics Lab, a group within UCL consisting of researchers from the Department of Computer Science, Department of Geography, and the UCL Bartlett. Our project supervisors are Prof. Michal Galas and Dr. Zeynep Engin, both from the Department of Computer Science and the Urban Dynamics Lab.</p>
-                            
-                            <p> We’ve been in constant contact with them, both through weekly meetings, and email interaction, to seek advice and support throughout the project, specifically with how the requirements are to be understood and also any problems we faced with regards to implementing them.</p>
-                            
-                            <p> Thus, both acted as our main point-of-call for technical support, alongside our peers working on similar projects (since there are four project groups in our year and the year above working with UDL), and online resources such as Stack Overflow.</p>
-                            <br><br>
-                            <h2 id="abstract"> Abstract and Problem </h2>
-                            <p>UCL is a global leader in various disciplines; two of these are Computer Science and Geography, with the Urban Dynamics Lab (UDL) resulting from these. UDL is a research centre for Urban Data analysis, bringing together researchers from both disciplines to collaborate on data analysis of maps, spatial data, waypoints, routes and various other types of geodata.</p>
+                        <p>To further prototype the project and start creating the web platform, the team had to undertake research into the existing web design solutions and the resources given by the client (a shared server) that would help create the solution.</p>
+                        <h2 id="existing"> Existing resources - the shared server </h2>
+                        <p>The Urban Dynamics Lab has been using a server hosted by the Computer Science department for development and testing of existing services such as data manipulation systems. The server (UDLTest1) is designed to host the activity and development of all 5 teams that work on the same project as us. This means that it will be used for the dev process of 2 data pipelining systems, 2 engines for data storage and data manipulation (a CKAN instance and a Jupyter Notebook instance) that will all be supported by PostgreSQL and Hadoop instances.</p>
+                        <p>The team agreed that even if using this server might prove to be just an extra effort based on the high number of shared environments, the fact that it would cut the entire cost for a proposed Virtual Server hosted on a Cloud (at least 10 pounds per month starting from the very first month of the project would have already meant for the client an unnecessary and undesired expense).</p>
+                        <p>Being a UCL development server, at the start of the project it was running an untouched Ubuntu 12.04 and, because this version has already reached his end of life in April 2017 <sup>1</sup>(http://releases.ubuntu.com/12.04/), the team decided to upgrade the OS to the next available version  (14.04). After considering all running services on the server, we have decided not to proceed with updating to latest version as there might have been certain issues with the compatibility of other existing projects.
+                        Our personal research involved quite a fun (even though sometimes frustrating) side as well, as the server was poorly configured at first, not allowing us to attach to BASH on ssh or even using any other means of switching from the default SH. So, basically, our first week of testing the server was done without being able to use the arrow keys, delete keys or any other keyboard shortcuts until the admin realised what the problem was a reconfigured our accounts.</p>
+                        <br><br>
+                        <h2 id="tools">Development Tools & Frameworks</h2>
+                        <p>The purpose of this section is to discuss the programming languages, frameworks and platforms that have been carefully taken into consideration when choosing the right means in order to develop the app in order to suit the needs and expectations of the client.</p>
+                        <p>Our main concern was to whether aim for a more out of the box solution that would provide less direct compatibility with the desired features or pick a framework that would require us a implementation from scratch, but which will eventually result in an extensible solution in terms of adding new features.</p>
+                        <br>
+                        <h2 id="web">Web framework</h2>
+                        <h6>Drupal</h6>
+                        <p>Drupal is content management software. It has great standard features, like easy content authoring, reliable performance, and excellent security. But what sets it apart is its flexibility; modularity is one of its core principles <sup>2</sup>https://www.drupal.org/about.</p>
+                        <p>In our first meetings, the client has pointed to us that while this platform will be integrated within other existing services of the Urban Dynamics Lab project that have been designed through Drupal, it would be a rather wise decision to settle on this technology. However, after some research, our main concern was that Drupal has already been around for some decades now and it is widely considered “old” technology. Even so, its potential in terms of content administration (done without a need of a developer as anyone could use the out-of-the-box admin UI) had an outstanding impact on our opinion.</p>
+                        <p>The level of customization that we required to implement our solution seemed also available through Drupal as all modules and themes can be customized through the PHP, HTML, CSS and JS template files that all plugins offered.</p>
+                        <p>Another problem arose when the team started looking for compatibility with other features that we would require. For example, our client asked for another layer of security done through LDAP. The plugin created for this security service for the latest release of Drupal (Drupal 8) is known to be unstable due to PHP incompatibilities in the way Drupal 8 manages authentication requests. This means that we had to settle on the latest patch of the previous version (at that time Drupal 7.56, which got upgraded to Drupal 7.57 after a new patch release in the beginning of March 2018).</p>
+                        <h6> Ruby on Rails</h6>
+                        <p>Ruby on Rails is open source software, which allows a complete customization over all the features of the project. There are certain Gems (plugins) that would allow the team to easily implement the desired functionalities of the required solution <sup>3</sup> (http://rubyonrails.org/everything-you-need/), but it would still leave plenty of coding to be done from scratch in order to achieve features such as  LDAP configuration with the app and the powerful searching without using an external service that requires financial costs. </p>
+                        <p>Even so, probably the biggest issue would have been represented by the fact that Rails applications usually require that content management is done through the backend (unless a complicated implementation of a self-designed API is done in order to control certain administration tasks from the UI - never the most secure option).</p>
+                        <p>All these required a reconsideration of options, even if the team already had some experience with this software and would have not required so many learning hours as with the other development frameworks.</p>
+                        <h6> NodeJS & AngularJS</h6>
+                        <p>NodeJS is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient <sup>4</sup> (https://nodejs.org/en/).</p>
+                        <p>As for Rails, our requirements would have required heavy customization using additional libraries such as Express (for server requests) and AngularJS (for the front-end as Node.js does not include a core module for creating a great user experience). This again meant a lot of time spent on creating features that other options (Drupal) had included in their base functionalities and the team decided that the resources spent on such things could be better spent on enhancing features rather than creating them.</p>
+                        <br><br>
+                        <h2 id="database"> Database Type</h2>
+                        <p>Database type is an important decision to be made as the project will eventually require syncing with the data management and analysis engines that the platform will incorporate. This decision has discussed and eventually made after the team has settled on Drupal 7 has the development software.</p>
+                        <h6> PostgreSQL</h6>
+                        <p>PostgreSQL is a powerful, open source object-relational database system. It has more than 15 years of active development and a proven architecture that has earned it a strong reputation for reliability, data integrity, and correctness. <sup>5</sup>(https://www.postgresql.org/about/) </p>
+                        <p>The team has considered PostgreSQL one of the best options from the very beginning of the research as the other systems that would be used to create the Expert Facility of the platform (CKAN and Jupyter Notebook) would be using an instance of this database, as well. This would mean that, in terms of further development, a possible synchronization between these services would be possible.</p>
+                        <p>Considering the requirements for the current solution, PostgreSQL also presented all the necessary features for storing account details of the users, content of the forum and a fast and reliable query system that would support the necessity of a fast searching service from within the platform. </p>
+                        <p>The only con that our research has found is that Drupal is not directly compatible with PostgreSQL as the maintainers have developed for those stacks that include a MySQL instance for storage. Even so, the setup of Drupal allowed us to connect to an already running configured instance of PostgreSQL and this small issue was easily overcome.</p>
+                        <h6> MySQL</h6>
+                        <p>MySQL is a powerful, free open-source database management system that has been around for years. It is very stable and has a big community that helps maintain, debug and upgrade it. <sup>6</sup> (http://www.oracle.com/us/products/mysql/mysql-wp-top10-webbased-apps-461054.pdf). </p>
+                        <p>Its features would have easily allowed the team to implement all the required features of the application and its direct compatibility with Drupal would have meant a reliable connection between the content and the database without any expected outages due to incompatibility. </p>
+                        <p>The only con of running a MySQL instance to support our project is represented by the fact that, as previously mentioned, other services would have not run on the same type of database and syncing them would end up a complete nightmare for further development.</p>
+                        <br><br>
+                        <h2 id="server">Orchestration server</h2>
+                        <h6>Apache HTTP Server</h6>
+                        <p>The goal of this project is to provide a secure, efficient and extensible server that provides HTTP services in sync with the current HTTP standards. The Apache HTTP Server ("httpd") was launched in 1995 and it has been the most popular web server on the Internet since April 1996. <sup>7</sup>(https://httpd.apache.org/)</p>
+                        <p>Drupal is usually recommended to be setup using a LAMP or MAMP stack, whose orchestration is handled entirely by an Apache instance. As the team tried its best to create a DYI LAMP stack using a PostgreSQL instance and Drupal 7, it became rather obvious that this would be the easiest pick both in terms of time spent configuring the server.</p>
+                        <h6>NGINX</h6>
+                        <p>NGINX was written specifically to address the performance limitations of Apache web servers and it can be deployed as a standalone web server, as well as a frontend proxy for Apache and other web servers. <sup>8</sup> https://www.nginx.com/blog/nginx-vs-apache-our-view/</p>
+                        <p>This solution did not prove perfect to us as it would have become a burden to setup considering the fact that there is no out-of-the-box configuration to server Drupal based stacks and it might have required us a layer of containerization (through Docker or Kubernetes) in order to make use of its full qualities - not entirely necessary as the traffic expectations would not be as high as other NGINX served services.</p>
 
-                            <p>Currently, no single platform exists that brings together (a) an engine for analysing geodata and (b) a discussion facility/forum for analysts to discuss said data and analyses. Separate platforms and engines do exist, but there is growing demand from researchers for these to be brought together. Integrating these together into a single platform - a new Web Platform for the UDL - is thus the main challenge making up the bulk of our project.</p>
-                            <br><br>
-                            
-                            <h2 id="current">Other Current Solutions</h2> 
-                            <p>There isn’t a directly competing solution that directly challenges the platform we’ve built. However, there are two mainly partially competing solutions - we say they partially compete because they’re not built for the exact same purpose that our platform is. </p>
-                            <br>
-                                   <b>1.  Network of Innovators</b>
-                            <p>Network of Innovators (NoI - networkofinnovators.org) is a site for geodata analysts, researchers, academics, and the general populace, that allows for discussion of geodata and is specifically dedicated to this purpose. There is nothing preventing users from uploading analysis files in commonly used, non-specialist formats (e.g. Word Documents, PDF, etc), however, the fact that it’s not integrated with an analysis engine, limits the extent to which complex analyses can be shared and discussed. To summarise, the main appealing feature of Network of Innovators is its’ forum discussion facility. </p>
-                            <br>
-                                   <b>2.  Jupyter Notebook Analysis Engine</b>
-                            <p>The Jupyter Notebook Analysis Engine allows users to upload a variety of data in multiple formats, and analyses that data to produce an output analysis file, which the user is free to utilise by sharing, editing, and so on. However, this is very individual as no official collaboration and sharing feature is present. To summarise, the main appealing feature of Jupyter Notebook is the fact that it allows for data analysis.</p> 
-                            <br><br>
-                            
-                            <h2 id="solution">Our Solution</h2> 
-                            <p>Our Web Platform, as specified by the given client requirements, integrates the Jupyter Notebook Analysis Engine together with a fully-functional forum that incorporates the full spectrum of features that NoI provide with their forum, as well as direct integration with the analysis engine to share analysis results seamlessly onto the forum. </p>
-                            <br><br>
-                            
-                            <h2 id="features">Product Features</h2>
-                            <p>The features of our product can be summarised as follows:</p>
-                            <br>
-                            <ol>
-                            <li> Inclusion and integration of the <b>Jupyter Notebook Engine</b> inside the <b>Expert Facility</b></li>
-                            <li> Inclusion and integration of a customized <b>CKAN</b> instance inside the <b>Expert Facility</b></li>
-                            <li> Development and inclusion of the <b>Forum facility</b> </li>
-                            <li> Powerful and reliable <b>search</b> functionality to query users and discussion topics and the same time </li>
-                            <li> Users can define their own <b>tags</b> to define their <b>subjects of interest</b> so that they can network better </li>
-                            </ol>
-                            <br><br>
-                            
-                            <h2 id="demo">Video Demo</h2>
-                            <p>This will be the final demo</p>
-                            
-                            <br><br>
-                            <h2 id="team">The team behind</h2>
-                            <br><br>
-                             <div class="post-full-width">
-                            <script>
-                                var slider1_speed = "500";
-                                var slider1_auto = "true";
-                                var slider1_pagination = "true";
-                                var slider1_hover = "true";
-                            </script>
-                            <div class="image-slider-wrapper">
-                                <div class="caroufredsel_wrapper">
-                                    <ul id="slider1" class="image-slider slides center-text">
-                                        <li><img src="images/team/dragos.jpg" style="height: 500px;" alt=""><br><h6>Dragos Popa</h6><b>Team Lider</b><br>Programmer, Client Liaison, UI Design, Tester<br>dragos.popa.16@ucl.ac.uk</li>
-                                        <li><img src="images/team/suhayb.jpg" style="height: 500px;" alt=""><br><h6>Suhayb Hirsi</h6>Researcher, UI Design, Programmer<br>suhayb.hirsi.16@ucl.ac.uk</li>
-                                        <li><img src="images/team/farook.jpg" style="height: 500px;" alt=""><br><h6>Farook Dean</h6>Researcher, Report Editor<br>farook.dean.15@ucl.ac.uk</li>
-                                    </ul>
-                                </div>
-                                <div class="slider1_pagination carousel_pagination left"></div>
-                                <div class="clear"></div>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
                         </div>
                     </div>
                     <div class="clear"></div>
