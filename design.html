@@ -77,13 +77,12 @@
                 </div>
                 <div class="social-holder">
                     <div class="social-list">
-                        <a href="#client"><i class="fa fa-user"></i></a>
-                        <a href="#abstract"><i class="fa fa-exclamation-triangle"></i></a>
-                        <a href="#current"><i class="fa fa-flag-checkered"></i></a>
-                        <a href="#solution"><i class="fa fa-check-square"></i></a>
-                        <a href="#features"><i class="fa fa-wrench"></i></a>
-                        <a href="#demo"><i class="fa fa-play"></i></a>
-                        <a href="#team"><i class="fa fa-users"></i></a>
+                        <a href="#mockup">Design Mockup</a>
+                        <a href="#implementation">Implementation</a>
+                        <a href="#architecture">Architecture</a>
+                        <a href="#operations">Operations</a>
+                        <a href="#module">Module Customization</a>
+                        <a href="#theme">Theme Customization</a>
                     </div>
                 </div>
                 <div class="fixed scroll-top"><i class="fa fa-caret-square-o-up" aria-hidden="true"></i></div>
@@ -102,7 +101,7 @@
                     <div class="post-info content-860 center-relative">
                         <div class="cat-links">
                             <ul>
-                                <li><a href="intro.html">Design</a></li>
+                                <li><a href="intro.html">Design and Implementation</a></li>
                             </ul>
                         </div>
                         <div class="entry-date published">UI and UX</div>
@@ -111,73 +110,128 @@
 
                     <div class="entry-content">
                             
-                        <div class="content-wrap content-860 center-relative ">
-                            <h2 id="client">The Client</h2>
-                            
-                            <p class="wrap-blockquote"> Our project client is the Urban Dynamics Lab, a group within UCL consisting of researchers from the Department of Computer Science, Department of Geography, and the UCL Bartlett. Our project supervisors are Prof. Michal Galas and Dr. Zeynep Engin, both from the Department of Computer Science and the Urban Dynamics Lab.</p>
-                            
-                            <p> We’ve been in constant contact with them, both through weekly meetings, and email interaction, to seek advice and support throughout the project, specifically with how the requirements are to be understood and also any problems we faced with regards to implementing them.</p>
-                            
-                            <p> Thus, both acted as our main point-of-call for technical support, alongside our peers working on similar projects (since there are four project groups in our year and the year above working with UDL), and online resources such as Stack Overflow.</p>
-                            <br><br>
-                            <h2 id="abstract"> Abstract and Problem </h2>
-                            <p>UCL is a global leader in various disciplines; two of these are Computer Science and Geography, with the Urban Dynamics Lab (UDL) resulting from these. UDL is a research centre for Urban Data analysis, bringing together researchers from both disciplines to collaborate on data analysis of maps, spatial data, waypoints, routes and various other types of geodata.</p>
+                    <div class="content-wrap content-860 center-relative ">
+                    <p>The problem here was to integrate the already existent analysis engine together with a fully-functional forum. Thus, our problem wasn’t terribly complex, and due to this, we aimed to be as aspirational as possible, with regards to using the newest and most functional technologies in order to develop our site, to give it a “premium” look-and-feel and functionalities. </p>
 
-                            <p>Currently, no single platform exists that brings together (a) an engine for analysing geodata and (b) a discussion facility/forum for analysts to discuss said data and analyses. Separate platforms and engines do exist, but there is growing demand from researchers for these to be brought together. Integrating these together into a single platform - a new Web Platform for the UDL - is thus the main challenge making up the bulk of our project.</p>
-                            <br><br>
-                            
-                            <h2 id="current">Other Current Solutions</h2> 
-                            <p>There isn’t a directly competing solution that directly challenges the platform we’ve built. However, there are two mainly partially competing solutions - we say they partially compete because they’re not built for the exact same purpose that our platform is. </p>
-                            <br>
-                                   <b>1.  Network of Innovators</b>
-                            <p>Network of Innovators (NoI - networkofinnovators.org) is a site for geodata analysts, researchers, academics, and the general populace, that allows for discussion of geodata and is specifically dedicated to this purpose. There is nothing preventing users from uploading analysis files in commonly used, non-specialist formats (e.g. Word Documents, PDF, etc), however, the fact that it’s not integrated with an analysis engine, limits the extent to which complex analyses can be shared and discussed. To summarise, the main appealing feature of Network of Innovators is its’ forum discussion facility. </p>
-                            <br>
-                                   <b>2.  Jupyter Notebook Analysis Engine</b>
-                            <p>The Jupyter Notebook Analysis Engine allows users to upload a variety of data in multiple formats, and analyses that data to produce an output analysis file, which the user is free to utilise by sharing, editing, and so on. However, this is very individual as no official collaboration and sharing feature is present. To summarise, the main appealing feature of Jupyter Notebook is the fact that it allows for data analysis.</p> 
-                            <br><br>
-                            
-                            <h2 id="solution">Our Solution</h2> 
-                            <p>Our Web Platform, as specified by the given client requirements, integrates the Jupyter Notebook Analysis Engine together with a fully-functional forum that incorporates the full spectrum of features that NoI provide with their forum, as well as direct integration with the analysis engine to share analysis results seamlessly onto the forum. </p>
-                            <br><br>
-                            
-                            <h2 id="features">Product Features</h2>
-                            <p>The features of our product can be summarised as follows:</p>
-                            <br>
-                            <ol>
-                            <li> Inclusion and integration of the <b>Jupyter Notebook Engine</b> inside the <b>Expert Facility</b></li>
-                            <li> Inclusion and integration of a customized <b>CKAN</b> instance inside the <b>Expert Facility</b></li>
-                            <li> Development and inclusion of the <b>Forum facility</b> </li>
-                            <li> Powerful and reliable <b>search</b> functionality to query users and discussion topics and the same time </li>
-                            <li> Users can define their own <b>tags</b> to define their <b>subjects of interest</b> so that they can network better </li>
-                            </ol>
-                            <br><br>
-                            
-                            <h2 id="demo">Video Demo</h2>
-                            <p>This will be the final demo</p>
-                            
-                            <br><br>
-                            <h2 id="team">The team behind</h2>
-                            <br><br>
-                             <div class="post-full-width">
-                            <script>
-                                var slider1_speed = "500";
-                                var slider1_auto = "true";
-                                var slider1_pagination = "true";
-                                var slider1_hover = "true";
-                            </script>
-                            <div class="image-slider-wrapper">
-                                <div class="caroufredsel_wrapper">
-                                    <ul id="slider1" class="image-slider slides center-text">
-                                        <li><img src="images/team/dragos.jpg" style="height: 500px;" alt=""><br><h6>Dragos Popa</h6><b>Team Lider</b><br>Programmer, Client Liaison, UI Design, Tester<br>dragos.popa.16@ucl.ac.uk</li>
-                                        <li><img src="images/team/suhayb.jpg" style="height: 500px;" alt=""><br><h6>Suhayb Hirsi</h6>Researcher, UI Design, Programmer<br>suhayb.hirsi.16@ucl.ac.uk</li>
-                                        <li><img src="images/team/farook.jpg" style="height: 500px;" alt=""><br><h6>Farook Dean</h6>Researcher, Report Editor<br>farook.dean.15@ucl.ac.uk</li>
-                                    </ul>
-                                </div>
-                                <div class="slider1_pagination carousel_pagination left"></div>
-                                <div class="clear"></div>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
+                    <h2 id="mockup">Design Mockup </h2>
+                     
+                    <h4>Initial Client Consultation</h4>
+                    <p>To begin with, we consulted our client - the Urban Dynamics Lab - for any advice or pointers on features they’d like the design to implement and include. They specified that they’d like a design similar to the Networks of Innovators (NoI) design - as it’s the main (though indirect!) competitor. We then began to sketch/wireframe our site. The main purpose behind these sketches/wireframes was to provide ourselves and our client with a clear, simple overview of the layout. </p>
+
+                    <h5>First Prototype and Showing the Client</h5>
+                    <p>Initially, before showing the client the first iteration of all our webpages, we decided to add more detail to the Homepage mockup, and then use this as a sample for our client, to avoid complexity. This was so they’d still obtain a clear picture of the overall design and would be able to provide us with effective feedback. This was so we could build on our initial designs, changing them appropriately for more visual appeal and to move us closer to finalising the design. </p>
+
+                    <img src="images/content/homepage.jpg" alt="">
+
+                    <p>After showing our mockup to our client, they suggested multiple changes. These were mainly concerning the menu styling/location/size, the UDL banner across the top band of the mockup design, and the proposed style and placement of the login form and search bars respectively. We took this advice, and together with our own criticisms and suggested improvements for our work, we produced two more resultant prototypes. </p>
+
+                    <h4>Further Prototype Development</h4>
+                    <p>As a direct result of feedback from our clients, we developed two further mockups. Both of these are shown - and discussed, below.</p> 
+
+                    <h5>Prototype #2 <i>(ended up being the actual design)</i></h5>
+                    <p>This prototype involved us reshuffling the design, bearing in mind the advice of our clients, and making the following noticeable structure changes:</p>
+                        <ol>
+                    <li>Reduction of the menu bar to only take up half of upper part of the screen, replacing the blank space made to the upper right, with the search bar and login buttons occupying the newly-made space. </li>
+                    <li>Implementing the menu buttons down the left side of the forum, again as a single bar, rather, than across the top, taking up readability space. This way, the user can view more content at a time, and their view is less hindered. </li>
+                    <li>Implementing fewer menu buttons, bringing the total down from six to four, instead making Search and Log in separate (to the top right, as shown). </li>
+                    <li>Making the buttons more detailed in their design, to add to the overall user experience.</li> 
+                    <li>Adding in a “Latest Forum Posts” area to the right of the page, displaying active and newly made threads by users. 
+                    (get the image - will insert later)</li>
+                    </ol>
+
+                    <img src="images/content/forumpage.jpg" alt="">
+
+                    <h5>Prototype #3 </h5>
+                    <p>This prototype was developed as a stark alternative to Prototype #2, taking a radically different, more minimalistic approach to the UI design. It involved some very noticeable structure changes 
+                    Complete change of location for the menu bar - the menu bar is now displayed down the side of the page, rather than across the top. This was a suggestion from our clients, who encouraged us to experiment and assess the outcome. 
+                    Latest Forum Updates area is now located in the top left, with the Login and Signup buttons occupying the same area as Prototype #2
+                    Search bar has moved downwards, to below the Latest Forum Updates.
+                    Most importantly, the Menu has been made into an expandable tab, saving a sizeable amount of space, but slowing down the process of finding the required page, particularly for first-time/new users. This was our own idea, we hadn’t yet approved it with our clients.</p>
+
+                    <img src="images/content/signupPage.jpg" alt="">
+
+                    <h4>Consideration of Prototypes & Reaching a Decision</h4>
+                    <p>After designing all three prototypes as a team, we started to consider the advantages and disadvantages (from a UI perspective) of both. In addition, we consulted our client about all three designs, requesting them to assess which they felt was most suitable. After deliberation, Prototype #2 was chosen as our final design. The most pertinent factors contributing to this decision were:</p>
+                    <ol>
+                    <li>Menu - the menu isn’t too large (as with 6 buttons in Prototype #1) or too small (as with the expandable menu in Prototype #3), but rather medium-sized, which is more ergonomic for the user. </li>
+                    <li>Location of UDL Banner - the client agreed with us in our observation that the design should be close to that of Network of Innovators, it’s thereby more logical to locate the banner similarly, in the top left. </li>
+                    <li>Location of Search and Login forms - these are now located in the top right, mirroring the banner.</li>
+                    <li>Latest Forum Posts - this has been relocated to the right side of the page, and resized to occupy less space. (We ended up phasing this out, as discussed in the next section)</li>
+                    </ol>
+
+
+                    <h4>Slight Changes During Implementation Phase</h4>
+                    <p>As with any project, during the implementation phase we encountered a number of problems - both internally (mainly concerned with rapidly gaining proficiency in Drupal 8), and externally (mainly concerned with our regular progress checks with our clients - during which they would review our progress on the website and suggest changes - due to this, we ended up making a few further, slight changes during the implementation):</p>
+                    <ol>
+                    <li>Removal of Latest Forum Posts from every page, instead restricting this solely to the Forum Page </li>
+                    <li>Relocation and development of Login form - instead of having a Login button in the top right, this was made into a form conjoined to the left Menu area.</li>
+                    </ol>
+
+                    <h2 id="implementation">Implementation</h2>
+                    <h3 id="architecture">Architecture Design</h3>
+
+                    <p>The entire system is currently relying on the Ubuntu 14.04 Server that has been provided by the UCL Computer Science department. This is a shared environment which serves other services related to the Urban Dynamics Lab (data management system, data analysis engine and background pipelines to support them). The team has created a custom LAPP (abbreviation from Linux, Apache, PostgreSQL and PHP) (https://www.turnkeylinux.org/lapp) stack that the team has generated in order to host the project. Due to the fact that this is a custom development server and as request by our client, the server is only reachable from within the UCL network (Eduroam) and the client will be able to open access from anywhere by asking the server administrator to change the firewall rules of the network that currently block all ports for traffic coming from outside of UCL.</p>
+
+                    <img src="images/content/lapp.png" alt="" >
+
+                   <p>An Apache HTTP server has been set up in order to orchestrate both the data management platform (CKAN) as well as the main platform that the team has developed. This orchestration server is used to map each service to different ports and help them communicate to the PostgreSQL instances that they both use to store data. In other words, Apache is holding together all the parts integrated in our custom LAPP stack as a sole VirtualHost, serving its content on Port 443.</p>
+
+                    <p>The main functionalities of the website are based on the Drupal instance. Drupal is a web framework that uses PHP in order to serve content and render (from database), both custom functionalities, UI design and content. It servers both as the content management system, as well as administration service through the core functionalities. A Drupal module is a collection of files containing some functionality, written in PHP. Because the module code executes within the context of the site, it can use all the functions and access all variables and structures of Drupal core. In other words, they are used to customize and enhance the functionality of a clean instance in order to meet requirements. (https://www.drupal.org/docs/7/creating-custom-modules/understanding-the-hook-system-for-drupal-modules)</p>
+
+                    <img src="images/content/architecture.png" alt="" >
+
+                    <h2 id="operations">Operations</h2>
+
+                   <p> Due to the out-of-the-box design of Drupal, from the very beginning of the development period we have been able to generate a working version of the platform. Due to this, we have decided to adhere to an Agile project management strategy. This means that the first thing to fall in our pipeline was the deployment of the stack - because Drupal allows module development and content management with zero downtime. Due to this, we have been placed in the perfect position where we could have the same production environment mirroring the development one, boosting productivity, as well as time spent on testing.</p>
+
+                    <p>When it comes to Networking, an Apache custom configuration has been written so that the service handles both CKAN (port 8080) and the main platform (port 443) in independent environments, while serving both of the continuously. This means that if ever the case of a faulty VirtualHost on either sides, will no specifically affect the other unless the problem is coming from the Apache instance as well (highly unlikely).</p>
+
+                    <img src="images/content/apache-conf.png" alt="" >
+
+                    <p>In terms of Version Control and Backup, we have have used both Git and a custom CRON job. A local git repository was set up at first in order to keep track of any newly added modules, customizations added to existing modules, as well as changes to the existing theme. As the project evolved and the work required rather dangerous work on the Apache configuration, we have decided to be more cautious with the existing codebase. This made the team take action as follows:</p>
+                        <ol>
+                    <li>Push the local repository to a remote GitHub one owned by the Urban Dynamics Lab team</li>
+                    <li>Create a CRON job running on the server to backup the database automatically into a text file and push it to a secure location on the server, outside the Apache scope. This has been achieved using a CLI tool called `drush` (http://www.drush.org/) specifically created to handle operations on Drupal instances. With this, we have been able to create our own BASH script that generates a text backup and placed it under `/etc/cron.daily/`to run every day at midnight in case the unexpected occurs. This `.sql` file can be easily restored back into the Drupal instance in case of storage loss using the same tool.</li></ol>
+
+                    <img src="images/content/cron.png" alt="" >
+
+                    <h2 id="module">Module Customization</h2>
+                    <p>As previously mentioned, the core functionalities of Drupal have been extended using additional modules powered by the Drupal Community, which have been refurbished by us in order to fulfil the needs of the client. Among them, there were three modules that had the greatest impact on both the development process and the overall performance of the solution. </p>
+
+                    <h5>Profile module</h5>
+
+                    <img src="images/content/profile-view.png" alt="" >
+
+                    <p>The client has specifically required that an important feature of the solution has to be the capability of a user to mention the fields of his interest, allowing users to faster network with each other and prove their capabilities to answer different questions in the forum discussions. The team’s solution was to use the Profile2 module (https://www.drupal.org/project/profile2) and customize it in order to support additional fields to the user model. </p>
+
+                    <img src="images/content/profile-view-edit.png" alt="" >
+
+                    <p>This means that we have added not only the possibility to add new fields to the `users` table in the database, but through customization, we have also extended the power of the administrator so that, in any case required, the client can login as Power User and remove any unwanted users from the platform, without requiring the assistance of a developer.</p>
+
+                    <img src="images/content/profile2-module.png" alt="" >
+
+                    <h5>Search module</h5>
+                    <p>As one of the most important requirements was to create a powerful search that would be able to generate results from both the `users` and `forum topics` tables of the database. As this could have not been achieved with the core Drupal Search module, we had to use the Search API module (https://www.drupal.org/project/search_api) that allowed us to query any column of the tables (in our case, topic titles, account names, account description and account tags) that were stored and return them in a single view. </p>
+
+                    <img src="images/content/search-view.png" alt="" >**SCREENSHOT FROM SEARCH RESULTS PAGE**
+
+                    <p>To be more precise, the module created is able to generate its own index in the background based on what the implementation asked it and query directly on that for fast return. This is making use of the Observer Pattern to make the custom search module “listen” / “track”  any account profiles or forum topics being created or updated, triggering an update to the index with that new data.</p>
+
+                    <img src="images/content/observer-pattern.png" alt="" >
+
+                    <h5>Comment Module</h5>
+
+                    <p>The `comment` functionality is coming a core Drupal module. Generally, customization of these modules is more of a hazard, above anything else. This is the main reason why the team has decided not to improve on the functionality of this, but actually to work on the template rendering of the file. As mentioned, the user profile has received an upgrade in terms of complexity. This ended up with our entire comments section being flooded with all the user tags, description and other account history for every comment they left. Even so, our template customization allowed us to not only filter the user attributes that got to be rendered in the forum topic view, but also to add custom classes to the UI elements, which would eventually allow us to style everything from the custom theme.</p>
+
+                    <img src="images/content/comment-module.png" alt="" >
+                    
+
+                    <h2 id="theme">Theme Customization</h2>
+                    <p>The theme applied to the website is a custom one created by the team. We have used the Drupal Bootstrap theme (https://www.drupal.org/project/bootstrap)  as a starting point and starting building our own from there. Beside the usual CSS styling done for each page, we have identified 4 types of UI elements that required a new build-up for their php template: blocks (such as the search block), nodes (the template used as homepage and Expert Facility), page (the high-level overall look of the website - top and left menu, as well as login box)  and html (the scripts and styling files that get included in each page).</p>
+
+                    <img src="images/content/theme-tree.png" alt="" >
+
+                      
                         </div>
                     </div>
                     <div class="clear"></div>
