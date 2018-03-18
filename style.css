@@ -14,6 +14,37 @@ body
     background-color: #fff;
 }
 
+p{
+    margin-bottom: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+table td, table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+td ol li{
+    margin-left: 30px;
+}
+
+table tr:nth-child(even){background-color: #f2f2f2;}
+
+table tr:hover {background-color: #ddd;}
+
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #404040;
+    color: white;
+}
+
 .montserrat
 {
     font-family: 'Montserrat', sans-serif, Arial;
@@ -381,13 +412,14 @@ input, textarea, select
 {
     text-align: center;
     color: #5B5B5B;
-    font-size: 30px;
+    font-size: 10px;
     position: fixed;
-    margin-left: 35px;
+    margin-left: 0px;
 }
 
 .social-list a
 {
+    font-size: 10px;
     margin-top: -15px;
     display: block;
     color: #5b5b5b;

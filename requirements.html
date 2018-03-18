@@ -77,13 +77,10 @@
                 </div>
                 <div class="social-holder">
                     <div class="social-list">
-                        <a href="#client"><i class="fa fa-user"></i></a>
-                        <a href="#abstract"><i class="fa fa-exclamation-triangle"></i></a>
-                        <a href="#current"><i class="fa fa-flag-checkered"></i></a>
-                        <a href="#solution"><i class="fa fa-check-square"></i></a>
-                        <a href="#features"><i class="fa fa-wrench"></i></a>
-                        <a href="#demo"><i class="fa fa-play"></i></a>
-                        <a href="#team"><i class="fa fa-users"></i></a>
+                        <a href="#general">General Requirements</a>
+                        <a href="#moscow">MOSCOW</i></a>
+                        <a href="#gantt">GANTT</i></a>
+                        <a href="#use-cases">Use Cases</a>
                     </div>
                 </div>
                 <div class="fixed scroll-top"><i class="fa fa-caret-square-o-up" aria-hidden="true"></i></div>
@@ -112,72 +109,281 @@
                     <div class="entry-content">
                             
                         <div class="content-wrap content-860 center-relative ">
-                            <h2 id="client">The Client</h2>
-                            
-                            <p class="wrap-blockquote"> Our project client is the Urban Dynamics Lab, a group within UCL consisting of researchers from the Department of Computer Science, Department of Geography, and the UCL Bartlett. Our project supervisors are Prof. Michal Galas and Dr. Zeynep Engin, both from the Department of Computer Science and the Urban Dynamics Lab.</p>
-                            
-                            <p> We’ve been in constant contact with them, both through weekly meetings, and email interaction, to seek advice and support throughout the project, specifically with how the requirements are to be understood and also any problems we faced with regards to implementing them.</p>
-                            
-                            <p> Thus, both acted as our main point-of-call for technical support, alongside our peers working on similar projects (since there are four project groups in our year and the year above working with UDL), and online resources such as Stack Overflow.</p>
-                            <br><br>
-                            <h2 id="abstract"> Abstract and Problem </h2>
-                            <p>UCL is a global leader in various disciplines; two of these are Computer Science and Geography, with the Urban Dynamics Lab (UDL) resulting from these. UDL is a research centre for Urban Data analysis, bringing together researchers from both disciplines to collaborate on data analysis of maps, spatial data, waypoints, routes and various other types of geodata.</p>
+                        <h2 id="general">General Requirements </h2>
+                        <p>The goal of our project is to develop a web platform that allows users to analyse geodata and discuss/reference that geodata on the very same platform. The platform:
+                            <br>
+                        <ol>
+                        <li>Brings together existing features into a single platform (namely the forum and the Jupyter Engine)</li>
+                        <li>Encourages interaction between them through supporting searching for posts regarding past analyses via tags</li>
+                        <li>Has a look-and-feel based on the NoI website design, as requested by the UDL. </li>
+                        </ol>
+                        </p>
+                        <br>
+                        <p>The main users of our application can be categorized as follows: 
+                            <br>
+                        <ol>
+                        <li>Geodata analysts (e.g. urban planning professionals) who want to analyse data, and discuss said analyses within the forums with other analysts. </li>
+                        <li>University researchers and professors, such as those we’ve interacted with from the Urban Dynamics Lab, who are analysing data for academic purposes.</li>
+                        <li>Students learning how to use the Jupyter Analysis Engine in a geodata context (e.g. some Physics students make consistent use of this)</li>
+                        <li>The general population, for a multitude of reasons e.g. personal interest, one-off usage for work purposes, and so on.</li>
+                        </ol>
+                        </p>
+                        <br><br>
+                        
+                        <h2 id="moscow">MOSCOW Analysis</h2>
+                        <img src="images/ganttChartFinal.jpg" alt="">
+                        <br><br>
 
-                            <p>Currently, no single platform exists that brings together (a) an engine for analysing geodata and (b) a discussion facility/forum for analysts to discuss said data and analyses. Separate platforms and engines do exist, but there is growing demand from researchers for these to be brought together. Integrating these together into a single platform - a new Web Platform for the UDL - is thus the main challenge making up the bulk of our project.</p>
-                            <br><br>
-                            
-                            <h2 id="current">Other Current Solutions</h2> 
-                            <p>There isn’t a directly competing solution that directly challenges the platform we’ve built. However, there are two mainly partially competing solutions - we say they partially compete because they’re not built for the exact same purpose that our platform is. </p>
-                            <br>
-                                   <b>1.  Network of Innovators</b>
-                            <p>Network of Innovators (NoI - networkofinnovators.org) is a site for geodata analysts, researchers, academics, and the general populace, that allows for discussion of geodata and is specifically dedicated to this purpose. There is nothing preventing users from uploading analysis files in commonly used, non-specialist formats (e.g. Word Documents, PDF, etc), however, the fact that it’s not integrated with an analysis engine, limits the extent to which complex analyses can be shared and discussed. To summarise, the main appealing feature of Network of Innovators is its’ forum discussion facility. </p>
-                            <br>
-                                   <b>2.  Jupyter Notebook Analysis Engine</b>
-                            <p>The Jupyter Notebook Analysis Engine allows users to upload a variety of data in multiple formats, and analyses that data to produce an output analysis file, which the user is free to utilise by sharing, editing, and so on. However, this is very individual as no official collaboration and sharing feature is present. To summarise, the main appealing feature of Jupyter Notebook is the fact that it allows for data analysis.</p> 
-                            <br><br>
-                            
-                            <h2 id="solution">Our Solution</h2> 
-                            <p>Our Web Platform, as specified by the given client requirements, integrates the Jupyter Notebook Analysis Engine together with a fully-functional forum that incorporates the full spectrum of features that NoI provide with their forum, as well as direct integration with the analysis engine to share analysis results seamlessly onto the forum. </p>
-                            <br><br>
-                            
-                            <h2 id="features">Product Features</h2>
-                            <p>The features of our product can be summarised as follows:</p>
-                            <br>
-                            <ol>
-                            <li> Inclusion and integration of the <b>Jupyter Notebook Engine</b> inside the <b>Expert Facility</b></li>
-                            <li> Inclusion and integration of a customized <b>CKAN</b> instance inside the <b>Expert Facility</b></li>
-                            <li> Development and inclusion of the <b>Forum facility</b> </li>
-                            <li> Powerful and reliable <b>search</b> functionality to query users and discussion topics and the same time </li>
-                            <li> Users can define their own <b>tags</b> to define their <b>subjects of interest</b> so that they can network better </li>
-                            </ol>
-                            <br><br>
-                            
-                            <h2 id="demo">Video Demo</h2>
-                            <p>This will be the final demo</p>
-                            
-                            <br><br>
-                            <h2 id="team">The team behind</h2>
-                            <br><br>
-                             <div class="post-full-width">
-                            <script>
-                                var slider1_speed = "500";
-                                var slider1_auto = "true";
-                                var slider1_pagination = "true";
-                                var slider1_hover = "true";
-                            </script>
-                            <div class="image-slider-wrapper">
-                                <div class="caroufredsel_wrapper">
-                                    <ul id="slider1" class="image-slider slides center-text">
-                                        <li><img src="images/team/dragos.jpg" style="height: 500px;" alt=""><br><h6>Dragos Popa</h6><b>Team Lider</b><br>Programmer, Client Liaison, UI Design, Tester<br>dragos.popa.16@ucl.ac.uk</li>
-                                        <li><img src="images/team/suhayb.jpg" style="height: 500px;" alt=""><br><h6>Suhayb Hirsi</h6>Researcher, UI Design, Programmer<br>suhayb.hirsi.16@ucl.ac.uk</li>
-                                        <li><img src="images/team/farook.jpg" style="height: 500px;" alt=""><br><h6>Farook Dean</h6>Researcher, Report Editor<br>farook.dean.15@ucl.ac.uk</li>
-                                    </ul>
-                                </div>
-                                <div class="slider1_pagination carousel_pagination left"></div>
-                                <div class="clear"></div>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
+                        <h4 id="gantt">Analysis / Brief Discussion of our Gantt Chart</h4>
+                        <p>As per the Gantt Chart, the bulk of our progress was made in February, with our internal and client deadline being the 2nd of March. This was due to a number of reasons:
+
+                        <p>Initially, our clients had requested that we use Drupal 8 - the latest version - so the system would naturally be the latest one possible. However, for many of the features and goals we had and wanted to implement, this was problematic, as Drupal 8 is fairly new, and there is not a large support-base available compared to Drupal 7 - which has been around for about 5 years (though not as new!), but is not different to Drupal 8 (apart from lacking some of the core modules). Ended up doing hard-coding of themes in Drupal 8, which then did not work out as we had to transfer down to Drupal 7.</p>
+                        <p>Additionally, we experienced ongoing problems with configuring LDAP, and this lasted the duration of the project until we finally managed to configure it properly.</p>
+                        <p>The bulk of our requirements were fulfilled, including all Must Have (ID: M1 - M7) and Should Have requirements (ID: S1 - S4), and 3/5 of our Could Have requirements (ID: C1 - C3)</p>
+                        <br><br>
+
+                        <h2 id="use-cases">Use Cases</h2> 
+                        <p>Find below the use cases for the main actions that site users can take (both normal users, and administrators)</p>
+
+                        <table>
+                            <thead>
+                        <tr>
+                        <th>Use Case</th>
+                        <th>Expert Facility - Data Analysis</th>
+                        </tr> 
+                        </thead>
+                        
+                        <tbody>
+                        <tr>
+                        <td>ID </td>
+                        <td>UC1</td></tr> <tr><td>
+                        Brief Description</td>
+                        <td>User chooses between CKAN and Jupyter Hub for analysis, then analyses data.</td></tr> <tr><td>
+                        Primary Actors </td>
+                        <td>User </td></tr> <tr><td>
+                        Secondary Actors </td>
+                        <td>System </td></tr> <tr><td>
+                        Preconditions</td>
+                        <td>None</td></tr> <tr><td>
+                        Main Flow</td>
+                        <td>
+                        <ol>
+                        <li>User accesses Expert Facility page</li>
+                        <li>User presented with a choice of CKAN or Jupyter by System</li>
+                        <li>User chooses the appropriate preference and uploads/chooses data for analysis</li></ol>
+                        </td></tr>
+
+                        <tr><td>Postconditions </td>
+                        <td>System has results of analysis ready, for user to consume</td></tr><tr>
+                        <td>Alternative Flows </td>
+                        <td>User chooses between either CKAN or Jupyter, which influences their interaction with the analysis engine. All other factors are kept constant.  </td></tr> </tbody></table>
+
+
+                        <table>
+                            <thead>
+                        <tr>
+                        <th>Use Case</th>
+                        <th>Analysing Data with Jupyter Hub 
+                        </th>
+                        </tr>
+                        </thead>
+                        <tr><td>
+                        ID </td>
+                        <td>UC2 </td></tr>
+                         <tr><td>Brief Description</td>
+                       <td> User uploads or chooses data, then interacts with Jupyter Hub using Python to analyse data </td>
+                         </tr><tr><td>Primary Actors </td>
+                        <td>User </td>
+                         </tr><tr><td>Secondary Actors </td>
+                        <td>System (Jupiter Hub) </td>
+                         </tr><tr><td>Preconditions</td>
+                        <td>User has accessed Jupyter Hub, but not from the Expert Facility (which provides an option between CKAN and Jupyter)</td>
+                         </tr><tr><td>Main Flow</td>
+                            <td><ol>
+                        <li>User accesses Jupyter Notebook </li>
+                        <li>User chooses/uploads data to analyse</li>
+                        <li>User decides how they’d like to analyse the data</li>
+                        <li>User implements this analysis in Python</li>
+                        <li>Jupyter Hub returns the results of the analysis</li> </ol> </td>   
+
+                         </tr><tr><td>Postconditions 
+                        </td><td>none
+                         </tr><tr><td>Alternative Flows 
+                        </td><td>none
+                        </td></tr> </tbody></table>
+
+
+
+                        <table>
+                            <thead>
+                        <tr>
+                        <th>Use Case</th>
+                        <th>Signing up, Logging In/Out of Website
+                        </th>
+                        </tr>
+                        </thead>
+                        <tr><td>
+                        ID </td> 
+                        <td>UC3
+                        </td></tr><tr><td>Brief Description
+                        </td><td>User enters details to create account and sign up, then logs in, uses the website for an arbitrary amount of time, then logs out
+                        </td></tr><tr><td>Primary Actors 
+                        </td><td>User
+                        </td></tr><tr><td>Secondary Actors 
+                        </td><td>System
+                        </td></tr><tr><td>Preconditions
+                        </td><td>User hasn’t created an account before OR User hasn’t logged in 
+                        </td></tr><tr><td>Main Flow
+                        </td><td>
+                        <ol>
+                        <li>User clicks the “sign up” button on homepage</li> 
+                        <li>User enters details requested by the form </li> 
+                        <li>Users submits form and thereby successfully creates their account </li> 
+                        <li>User clicks on the login form, enters their details, submits and thereby logs in </li> 
+                        <li>User uses the site for an arbitrary amount of time </li> 
+                        <li>User exits the site by pressing the log out button </li> 
+                        </ol>
+
+                        </td></tr><tr><td>Postconditions 
+                        </td><td>User is now logged out of the system 
+                        </td></tr><tr><td>Alternative Flows 
+                        </td><td>none</td></tr> </tbody></table>
+
+                        <table>
+                            <thead>
+                        <tr>
+                        <th>Use Case</th>
+                        <th>Editing User Profile 
+                        </th>
+                        </tr>
+                        </thead>
+                        <tr><td>
+                        ID </td> 
+                        <td> 
+                        UC4
+                        </td></tr><tr><td>Brief Description
+                        </td><td>User changes one or more details about their profile (image, bio, name, expertise level, and so on)
+                        </td></tr><tr><td>Primary Actors 
+                        </td><td>User
+                        </td></tr><tr><td>Secondary Actors 
+                        </td><td>System
+                        </td></tr><tr><td>Preconditions
+                        </td><td>User is logged in 
+                        </td></tr><tr><td>Main Flow
+                        </td><td>
+                        <ol>
+                        <li>User is logged in </li>
+                        <li>User navigates to “edit my profile”</li>
+                        <li>User chooses a particular detail(s) to edit, and updates that piece of information/data/file (in the case of profile image)</li>
+                        <li>User saves the changes </li></ol>
+
+                        </td></tr><tr><td>Postconditions 
+                        </td><td>User now has a changed profile 
+                        </td></tr><tr><td>Alternative Flows 
+                        </td><td>none</td></tr> </tbody></table>
+
+
+                        <table>
+                            <thead>
+                        <tr>
+                        <th>Use Case</th>
+                        <th>Interacting with Threads (Posting, Editing, Deleting, Responding)
+                        </th>
+                        </tr>
+                        </thead>
+                        <tr><td>
+                        ID </td> 
+                        <td>
+                        UC5 
+                        </td></tr><tr><td>Brief Description
+                        </td><td>User chooses to interact with a thread (creating, editing, responding to, or deleting a thread)
+                        </td></tr><tr><td>Primary Actors 
+                        </td><td>User
+                        </td></tr><tr><td>Secondary Actors 
+                        </td><td>System
+                        </td></tr><tr><td>Preconditions
+                        </td><td>User is logged in 
+                        </td></tr><tr><td>Main Flow
+                        </td><td>User is logged in 
+                        <ol>
+                        <li>User navigates to the forum via the left menu </li>
+                        <li>User is presented with the forum and can either </li>
+                        <li>Create new thread via the appropriate button, inputting details as appropriate, then pressing submit </li>
+                        <li>Edit a thread they’ve previously posted, again via appropriate edit, then submit. </li>
+                        <li>Respond to a thread, by clicking it, then interacting with the “post response” form that becomes available.</li>
+                        <li>Delete a thread they’ve posted, by navigating to it, then using the delete option appropriately, then confirming their changes </li></ol>
+
+                        </td></tr><tr><td>Postconditions 
+                        </td><td>User’s choice now results in a changed (or removed) thread
+                        </td></tr><tr><td>Alternative Flows 
+                        </td><td>none</td></tr> </tbody></table>
+
+                        <table>
+                            <thead>
+                        <tr>
+                        <th>Use Case</th>                        
+                        <th>Content Management as Administrator
+                        </th>
+                        </tr>
+                        </thead>
+                        <tr><td>
+                        ID </td><td>
+                        UC6 
+                        </td></tr><tr><td>Brief Description
+                        </td><td>Admin wishes to add/change/remove content from the site (thread, filler text, images, theming etc)
+                        </td></tr><tr><td>Primary Actors 
+                        </td><td>Administrator
+                        </td></tr><tr><td>Secondary Actors 
+                        </td><td>System 
+                        </td></tr><tr><td>Preconditions
+                        </td><td>Administrator is logged in
+                        </td></tr><tr><td>Main Flow
+                        </td><td>
+                        <ol>
+                        <li>Administrator navigates to appropriate panel on area of the website they wish to make changes to </li>
+                        <li>Administrator makes change as appropriate. We’ve identified multiple types of changes</li>
+                        <li>Delete/lock/unlock threads - due to inappropriate content, etc</li>
+                        <li>Suspend users - due to inappropriate usage, behaviour, etc</li>
+                        <li>General changes to the site e.g. textual/image changes - navigate to the specific area and use the standard changes toolbar</li>
+
+                        </td></tr><tr><td>Postconditions 
+                        </td><td>none
+                        </td></tr><tr><td>Alternative Flows 
+                        </td><td>none</td></tr> </tbody></table>
+
+                        <table>
+                            <thead>
+                        <tr>
+                        <th>Use Case</th> 
+                        <th>Administrator testing the website 
+                        </th>
+                        </tr>
+                        </thead>
+                        <tr><td>
+                        ID </td><td>
+                        UC7 
+                        </td></tr><tr><td>Brief Description
+                        </td><td>Administrator wishes to test the modules configured for the Drupal website, specifically via Unit Testing
+                        </td></tr><tr><td>Primary Actors 
+                        </td><td>Administrator
+                        </td></tr><tr><td>Secondary Actors 
+                        </td><td>System
+                        </td></tr><tr><td>Preconditions
+                        </td><td>Administrator is logged in 
+                        </td></tr><tr><td>Main Flow
+                        </td><td>
+                        <ol>
+                        <li>Administrator navigates to administration bar, </li>
+                        <li>Then select configuration,</li>
+                        <li>Then selects development block,</li>
+                        <li>Then selects testing. </li>
+                        <li>Administrator selects the appropriate core modules for Unit Testing, and then tests these. </li></ol>
+
+                        </td></tr><tr><td>Postconditions 
+                        </td><td>none
+                        </td></tr><tr><td>Alternative Flows 
+                        </td><td>none</td></tr> </tbody></table>
+
                         </div>
                     </div>
                     <div class="clear"></div>
