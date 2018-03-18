@@ -77,13 +77,12 @@
                 </div>
                 <div class="social-holder">
                     <div class="social-list">
-                        <a href="#client"><i class="fa fa-user"></i></a>
-                        <a href="#abstract"><i class="fa fa-exclamation-triangle"></i></a>
-                        <a href="#current"><i class="fa fa-flag-checkered"></i></a>
-                        <a href="#solution"><i class="fa fa-check-square"></i></a>
-                        <a href="#features"><i class="fa fa-wrench"></i></a>
-                        <a href="#demo"><i class="fa fa-play"></i></a>
-                        <a href="#team"><i class="fa fa-users"></i></a>
+                        <a href="#strategy">Testing Strategy</a>
+                        <a href="#module">Drupal Test Module</a>
+                        <a href="#acceptance">Acceptance Testing</a>
+                        <a href="#selenium">Selenium</a>
+                        <a href="#user">User Testing</a>
+                        <a href="#responsive">Responsive Design</a>
                     </div>
                 </div>
                 <div class="fixed scroll-top"><i class="fa fa-caret-square-o-up" aria-hidden="true"></i></div>
@@ -97,7 +96,7 @@
 
                 <article class="center-relative">
                     <h1 class="entry-title">
-                        Testing and Feature Development
+                        Testing
                     </h1>
                     <div class="post-info content-860 center-relative">
                         <div class="cat-links">
@@ -112,72 +111,63 @@
                     <div class="entry-content">
                             
                         <div class="content-wrap content-860 center-relative ">
-                            <h2 id="client">The Client</h2>
-                            
-                            <p class="wrap-blockquote"> Our project client is the Urban Dynamics Lab, a group within UCL consisting of researchers from the Department of Computer Science, Department of Geography, and the UCL Bartlett. Our project supervisors are Prof. Michal Galas and Dr. Zeynep Engin, both from the Department of Computer Science and the Urban Dynamics Lab.</p>
-                            
-                            <p> We’ve been in constant contact with them, both through weekly meetings, and email interaction, to seek advice and support throughout the project, specifically with how the requirements are to be understood and also any problems we faced with regards to implementing them.</p>
-                            
-                            <p> Thus, both acted as our main point-of-call for technical support, alongside our peers working on similar projects (since there are four project groups in our year and the year above working with UDL), and online resources such as Stack Overflow.</p>
-                            <br><br>
-                            <h2 id="abstract"> Abstract and Problem </h2>
-                            <p>UCL is a global leader in various disciplines; two of these are Computer Science and Geography, with the Urban Dynamics Lab (UDL) resulting from these. UDL is a research centre for Urban Data analysis, bringing together researchers from both disciplines to collaborate on data analysis of maps, spatial data, waypoints, routes and various other types of geodata.</p>
+                        <h2 id="strategy">Test strategy </h2>
+                        <p>Testing is a crucial  section of the development cycle, it is fundamental  to the fact that we need to ensure what we deliver is a fully functioning platform. For this reason, we took the liberty of researching different Testing Frameworks. Drupal as you may have already guessed has its own set of testing modules that is geared towards functional testing instead of unit testing, hence tests are written in such a fashion that they test the whole interface instead of testing individual functions or sections of code. If you are reading this and favour unit testing in your test development cycle, we should emphasise that functional testing is as effective, if not yet still more suited than unit testing given the style of code used in our drupal version hence drupal is actually designed in such manner to favour functional testing. All in all, our platform is best suited to test using functional testing - however, we have also taken into account other forms of testing, as outlined below.</p>
 
-                            <p>Currently, no single platform exists that brings together (a) an engine for analysing geodata and (b) a discussion facility/forum for analysts to discuss said data and analyses. Separate platforms and engines do exist, but there is growing demand from researchers for these to be brought together. Integrating these together into a single platform - a new Web Platform for the UDL - is thus the main challenge making up the bulk of our project.</p>
-                            <br><br>
+
+                        <h2 id="module">Drupal Test Module</h2>
+                        <p>This Testing module comes preinstalled with drupal as a core module, it is functional/integration testing oriental module. This testing module/framework automatically creates a new sectioned-off environments for each test to run in. They create a fresh database installation and specifically create data for the test in the database and then make assertions based on expected results. Hence all tests have the original starting environment and there is no way tests can interfere with one another. More importantly, you do not have to consistently clean up your environment at the end of each test as each test creates its own environment . As you are not actually testing on production but entirely different instance of drupal with                       its own environment.</p>
+
+                        <p>Each isolated drupal instance is needed to ensure that each test can begin on the same "starting position." It also means that changes made to the local development environment will not be present in the testing environment and cannot be tested. While this module favours functional testing we added our own custom unit testing.  Our Tests include the following tests Bootstrap-Theme , creating new content, creating new users, LDAP configuration, URL aliasing, database, system testing and many more. </p>
+
+
+                        <h2 id="acceptance">Acceptance Testing </h2>
+                        
+                        <h2 id="selenium">Selenium </h2>
+                        <p>Selenium IDE a Firefox add-on that will do simple record-and-playback of interactions with the browser. The record function saves the history of your clicks in an HTML file containing a table with three columns and a row for each click. We created multiple tests and placed them in several test suites that test everything from content generation to user profile editing to searching to expert facility usage.</p>
+
+                       <p> However, Selenium webdriver with codeception we believe is the most sustainable extendable option for acceptance testing for our site for the future development which we have not yet implemented, the reason for this is that we believe our current testing strategy is inclusive and meets development standards for small drupal platform like ours, however if our client wishes to expand our platform we advise future development teams to use selenium webdriver with codeception, as Selenium IDE is being deprecated. </p>
+
+                        <h2 id="user">User Testing</h2>
+
+                        <p>As development progressed we asked various external users to use the platform, we provided a “story” on what the typical user would be able to do and explained who the key features worked. After each stage of testing we asked for a feedback on what can be improved, form this we implemented changes where necessary. We did this alongside our weekly client meeting who would view the platform and give us further feedback on how to improve the platform.</p>
+                        
+                        <h2 id="responsive">Responsive Design Testing </h2>
+                        <p>The following is our testing results using multiple devices to test responsive design and compatibility:</p>
+                        
+                        <table>
+                            <thead>
+                        <th>Device Model
+                        </th><th>System Version
+                        </th><th>Screen Size
+                        </th><th>Result</th></thead>
+                        <tbody><tr><td>
+                        iPhone 5
+                        </td><td>IOS 6
+                        </td><td>320 * 568
+                        </td><td>Successful
+                        </td></tr><tr><td>iPhone 6 
+                        </td><td>IOS 8
+                        </td><td>375 * 667
+                        </td><td>Successful
+                        </td></tr><tr><td>iPhone 6 Plus 
+                        </td><td>IOS 8
+                        </td><td>414 * 736
+                        </td><td>Successful
+                        </td></tr><tr><td>iPad Pro
+                        </td><td>IOS 9
+                        </td><td>1024 * 1366
+                        </td><td>Successful
+                        </td></tr><tr><td>Nexus 6P
+                        </td><td>Android 6.0
+                        </td><td>412 * 732
+                        </td><td>Successful
+                        </td></tr><tr><td>Galaxy S5
+                        </td><td>Android 4.4
+                        </td><td>360  * 640
+                        </td><td>Successful
+                        </td></tr></tbody></table>
                             
-                            <h2 id="current">Other Current Solutions</h2> 
-                            <p>There isn’t a directly competing solution that directly challenges the platform we’ve built. However, there are two mainly partially competing solutions - we say they partially compete because they’re not built for the exact same purpose that our platform is. </p>
-                            <br>
-                                   <b>1.  Network of Innovators</b>
-                            <p>Network of Innovators (NoI - networkofinnovators.org) is a site for geodata analysts, researchers, academics, and the general populace, that allows for discussion of geodata and is specifically dedicated to this purpose. There is nothing preventing users from uploading analysis files in commonly used, non-specialist formats (e.g. Word Documents, PDF, etc), however, the fact that it’s not integrated with an analysis engine, limits the extent to which complex analyses can be shared and discussed. To summarise, the main appealing feature of Network of Innovators is its’ forum discussion facility. </p>
-                            <br>
-                                   <b>2.  Jupyter Notebook Analysis Engine</b>
-                            <p>The Jupyter Notebook Analysis Engine allows users to upload a variety of data in multiple formats, and analyses that data to produce an output analysis file, which the user is free to utilise by sharing, editing, and so on. However, this is very individual as no official collaboration and sharing feature is present. To summarise, the main appealing feature of Jupyter Notebook is the fact that it allows for data analysis.</p> 
-                            <br><br>
-                            
-                            <h2 id="solution">Our Solution</h2> 
-                            <p>Our Web Platform, as specified by the given client requirements, integrates the Jupyter Notebook Analysis Engine together with a fully-functional forum that incorporates the full spectrum of features that NoI provide with their forum, as well as direct integration with the analysis engine to share analysis results seamlessly onto the forum. </p>
-                            <br><br>
-                            
-                            <h2 id="features">Product Features</h2>
-                            <p>The features of our product can be summarised as follows:</p>
-                            <br>
-                            <ol>
-                            <li> Inclusion and integration of the <b>Jupyter Notebook Engine</b> inside the <b>Expert Facility</b></li>
-                            <li> Inclusion and integration of a customized <b>CKAN</b> instance inside the <b>Expert Facility</b></li>
-                            <li> Development and inclusion of the <b>Forum facility</b> </li>
-                            <li> Powerful and reliable <b>search</b> functionality to query users and discussion topics and the same time </li>
-                            <li> Users can define their own <b>tags</b> to define their <b>subjects of interest</b> so that they can network better </li>
-                            </ol>
-                            <br><br>
-                            
-                            <h2 id="demo">Video Demo</h2>
-                            <p>This will be the final demo</p>
-                            
-                            <br><br>
-                            <h2 id="team">The team behind</h2>
-                            <br><br>
-                             <div class="post-full-width">
-                            <script>
-                                var slider1_speed = "500";
-                                var slider1_auto = "true";
-                                var slider1_pagination = "true";
-                                var slider1_hover = "true";
-                            </script>
-                            <div class="image-slider-wrapper">
-                                <div class="caroufredsel_wrapper">
-                                    <ul id="slider1" class="image-slider slides center-text">
-                                        <li><img src="images/team/dragos.jpg" style="height: 500px;" alt=""><br><h6>Dragos Popa</h6><b>Team Lider</b><br>Programmer, Client Liaison, UI Design, Tester<br>dragos.popa.16@ucl.ac.uk</li>
-                                        <li><img src="images/team/suhayb.jpg" style="height: 500px;" alt=""><br><h6>Suhayb Hirsi</h6>Researcher, UI Design, Programmer<br>suhayb.hirsi.16@ucl.ac.uk</li>
-                                        <li><img src="images/team/farook.jpg" style="height: 500px;" alt=""><br><h6>Farook Dean</h6>Researcher, Report Editor<br>farook.dean.15@ucl.ac.uk</li>
-                                    </ul>
-                                </div>
-                                <div class="slider1_pagination carousel_pagination left"></div>
-                                <div class="clear"></div>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
                         </div>
                     </div>
                     <div class="clear"></div>
