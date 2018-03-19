@@ -109,12 +109,12 @@
                     </div>
 
                     <div class="entry-content">
-                            
+
                     <div class="content-wrap content-860 center-relative ">
                     <p>The problem here was to integrate the already existent analysis engine together with a fully-functional forum. Thus, our problem wasn’t terribly complex, and due to this, we aimed to be as aspirational as possible, with regards to using the newest and most functional technologies in order to develop our site, to give it a “premium” look-and-feel and functionalities. </p>
 
                     <h2 id="mockup">Design Mockup </h2>
-                     
+
                     <h4>Initial Client Consultation</h4>
                     <p>To begin with, we consulted our client - the Urban Dynamics Lab - for any advice or pointers on features they’d like the design to implement and include. They specified that they’d like a design similar to the Networks of Innovators (NoI) design - as it’s the main (though indirect!) competitor. We then began to sketch/wireframe our site. The main purpose behind these sketches/wireframes was to provide ourselves and our client with a clear, simple overview of the layout. </p>
 
@@ -126,7 +126,7 @@
                     <p>After showing our mockup to our client, they suggested multiple changes. These were mainly concerning the menu styling/location/size, the UDL banner across the top band of the mockup design, and the proposed style and placement of the login form and search bars respectively. We took this advice, and together with our own criticisms and suggested improvements for our work, we produced two more resultant prototypes. </p>
 
                     <h4>Further Prototype Development</h4>
-                    <p>As a direct result of feedback from our clients, we developed two further mockups. Both of these are shown - and discussed, below.</p> 
+                    <p>As a direct result of feedback from our clients, we developed two further mockups. Both of these are shown - and discussed, below.</p>
 
                     <h5>Prototype #2 <i>(ended up being the actual design)</i></h5>
                     <p>This prototype involved us reshuffling the design, bearing in mind the advice of our clients, and making the following noticeable structure changes:</p>
@@ -134,16 +134,16 @@
                     <li>Reduction of the menu bar to only take up half of upper part of the screen, replacing the blank space made to the upper right, with the search bar and login buttons occupying the newly-made space. </li>
                     <li>Implementing the menu buttons down the left side of the forum, again as a single bar, rather, than across the top, taking up readability space. This way, the user can view more content at a time, and their view is less hindered. </li>
                     <li>Implementing fewer menu buttons, bringing the total down from six to four, instead making Search and Log in separate (to the top right, as shown). </li>
-                    <li>Making the buttons more detailed in their design, to add to the overall user experience.</li> 
-                    <li>Adding in a “Latest Forum Posts” area to the right of the page, displaying active and newly made threads by users. 
+                    <li>Making the buttons more detailed in their design, to add to the overall user experience.</li>
+                    <li>Adding in a “Latest Forum Posts” area to the right of the page, displaying active and newly made threads by users.
                     (get the image - will insert later)</li>
                     </ol>
 
                     <img src="images/content/forumpage.jpg" alt="">
 
                     <h5>Prototype #3 </h5>
-                    <p>This prototype was developed as a stark alternative to Prototype #2, taking a radically different, more minimalistic approach to the UI design. It involved some very noticeable structure changes 
-                    Complete change of location for the menu bar - the menu bar is now displayed down the side of the page, rather than across the top. This was a suggestion from our clients, who encouraged us to experiment and assess the outcome. 
+                    <p>This prototype was developed as a stark alternative to Prototype #2, taking a radically different, more minimalistic approach to the UI design. It involved some very noticeable structure changes
+                    Complete change of location for the menu bar - the menu bar is now displayed down the side of the page, rather than across the top. This was a suggestion from our clients, who encouraged us to experiment and assess the outcome.
                     Latest Forum Updates area is now located in the top left, with the Login and Signup buttons occupying the same area as Prototype #2
                     Search bar has moved downwards, to below the Latest Forum Updates.
                     Most importantly, the Menu has been made into an expandable tab, saving a sizeable amount of space, but slowing down the process of finding the required page, particularly for first-time/new users. This was our own idea, we hadn’t yet approved it with our clients.</p>
@@ -224,14 +224,23 @@
                     <p>The `comment` functionality is coming from a core Drupal module. Generally, customization of these modules is more of a hazard, above anything else. This is the main reason why the team has decided not to improve on the functionality of this, but actually to work on the template rendering of the file. As mentioned, the user profile has received an upgrade in terms of complexity. This ended up with our entire comments section being flooded with all the user tags, description and other account history for every comment they left. Even so, our template customization allowed us to not only filter the user attributes that got to be rendered in the forum topic view, but also to add custom classes to the UI elements, which would eventually allow us to style everything from the custom theme.</p>
 
                     <img src="images/content/comment-module.png" alt="" >
-                    
+
 
                     <h2 id="theme">Theme Customization</h2>
                     <p>The theme applied to the website is a custom one created by the team. We have used the Drupal Bootstrap theme (https://www.drupal.org/project/bootstrap)  as a starting point and starting building our own from there. Beside the usual CSS styling done for each page, we have identified 4 types of UI elements that required a new build-up for their php template: blocks (such as the search block), nodes (the template used as homepage and Expert Facility), page (the high-level overall look of the website - top and left menu, as well as login box)  and html (the scripts and styling files that get included in each page).</p>
 
                     <img src="images/content/theme-tree.png" alt="" >
 
-                      
+                    <h2 id="ldap">Lightweight Directory Access Protocol (LDAP)</h2>
+                    <p>Lightweight Directory Access Protocol (LDAP) is an open, industry standard and popular means of accessing information stored in a directory server. LDAP offers a number of functionality like automatically encoding encrypted passwords using encryption methods like MD5, they are stored in a way that makes it easy to authenticate users while making it very difficult to determine what their clear-text credentials really are. Another functionality it offers, is support for numerous password policy features like password expiration, password quality validation, and account-block from too many failed attempts. Finally, all LDAP servers like the one we have used as explained below offer some kind of backup and restore mechanism, while supporting exporting data in the standard LDIF format that can be read by other LDAP servers, which was helpful as we originally created our LDAP scheme using Apache Directory Studio then exported the scheme in a LDIF format to our deployed instances. Our scheme looks as follows.</p>
+
+                    <img src="" alt"">
+                    
+                    <br></br>
+                    <p>We had a choice of two LDAP servers to choose from, OpenLDAP and Apache Directory Server(ApacheDS). While both are sufficient for our project we used ApacheDS. The reason for this, is OpenLDAP doesn’t come with many tools that support managing the server, most of configuration is done through the command line using LDIF’s. However, ApacheDS comes with Apache Directory Studio which has a collection of server management tools to configure our server, hence managing our LDAP instance is far easier. Another advantage of Apache Directory Server is the ability to run stored procedures and triggers in the LDAP database. This again helps our LDAP administrator to have more control over the database and maintenance/management tasks.</p>
+
+                    <p>Our client insisted we use LDAP for verification and authentication.</p>
+
                         </div>
                     </div>
                     <div class="clear"></div>
