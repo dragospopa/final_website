@@ -77,13 +77,11 @@
                 </div>
                 <div class="social-holder">
                     <div class="social-list">
-                        <a href="#client"><i class="fa fa-user"></i></a>
-                        <a href="#abstract"><i class="fa fa-exclamation-triangle"></i></a>
-                        <a href="#current"><i class="fa fa-flag-checkered"></i></a>
-                        <a href="#solution"><i class="fa fa-check-square"></i></a>
-                        <a href="#features"><i class="fa fa-wrench"></i></a>
-                        <a href="#demo"><i class="fa fa-play"></i></a>
-                        <a href="#team"><i class="fa fa-users"></i></a>
+                        <a href="#achievements">Achievements</a>
+                        <a href="#further">Further Development</a>
+                        <a href="#critical">Critical Evaluation</a>
+                        <a href="#functionality">Functionality</a>
+                        <a href="#stability">Stability</a>
                     </div>
                 </div>
                 <div class="fixed scroll-top"><i class="fa fa-caret-square-o-up" aria-hidden="true"></i></div>
@@ -112,72 +110,57 @@
                     <div class="entry-content">
                             
                         <div class="content-wrap content-860 center-relative ">
-                            <h2 id="client">The Client</h2>
-                            
-                            <p class="wrap-blockquote"> Our project client is the Urban Dynamics Lab, a group within UCL consisting of researchers from the Department of Computer Science, Department of Geography, and the UCL Bartlett. Our project supervisors are Prof. Michal Galas and Dr. Zeynep Engin, both from the Department of Computer Science and the Urban Dynamics Lab.</p>
-                            
-                            <p> We’ve been in constant contact with them, both through weekly meetings, and email interaction, to seek advice and support throughout the project, specifically with how the requirements are to be understood and also any problems we faced with regards to implementing them.</p>
-                            
-                            <p> Thus, both acted as our main point-of-call for technical support, alongside our peers working on similar projects (since there are four project groups in our year and the year above working with UDL), and online resources such as Stack Overflow.</p>
-                            <br><br>
-                            <h2 id="abstract"> Abstract and Problem </h2>
-                            <p>UCL is a global leader in various disciplines; two of these are Computer Science and Geography, with the Urban Dynamics Lab (UDL) resulting from these. UDL is a research centre for Urban Data analysis, bringing together researchers from both disciplines to collaborate on data analysis of maps, spatial data, waypoints, routes and various other types of geodata.</p>
+                        <h2 id="achievements">Achievements </h2>
+                        <ol>
+                        <li>We successfully integrated the Jupyter Notebook with a fully-functional forum, in a seamless fashion such that you can discuss analysis results within the forum.
+                        </li>
+                        <li>We successfully achieved a look-and-feel praised by our clients - since they did specify that they wanted a look-and-feel similar to that provided by Network of Innovators (NoI - networkofinnovators.org)
+                        </li></ol>
+                        
+                        <p>The final requirements and their completion states are summarised in the requirements evaluation table below. </p>
+                        <br>
+                        <h2 id="further">Further Development</h2>
+                        <p>To further develop our Web Platform, in hindsight, we identified a number of areas that could be improved and added. They are listed below, beginning with the requirements that we didn’t manage to implement: </p>
+                        <ol><li>
+                        Firstly, to implement functionality for unique link referencing between threads, so that users can efficiently share links to analyses, without needing to worry about cross-referencing of links. </li>
+                        <li>Thirdly, to implement the site in Drupal 8. This is for increased shelf-life of the product, as Drupal 7 has been around for a long time and will likely be phased out much quicker than Drupal 8, meaning it will become harder to maintain and so on. However, due to the constrained time limit for this project (over two terms - one of planning and one of development), meant that we weren’t really able to get to grips with Drupal 8 in time - especially as it’s new and doesn’t have a well-established support base like Drupal 7.</li> 
+                        <li>The CKAN database and the one that supports the platform could be merged so that the search would be able to retrieve information stored on there, as well. Due to the fact that the client has made it clear that they would like to have this too late in the development process, we were unable to extend the search scope on time.
+                        </li></ol>
+                        <br>
+                        <h2 id="critical">Critical Evaluation </h2>
 
-                            <p>Currently, no single platform exists that brings together (a) an engine for analysing geodata and (b) a discussion facility/forum for analysts to discuss said data and analyses. Separate platforms and engines do exist, but there is growing demand from researchers for these to be brought together. Integrating these together into a single platform - a new Web Platform for the UDL - is thus the main challenge making up the bulk of our project.</p>
-                            <br><br>
-                            
-                            <h2 id="current">Other Current Solutions</h2> 
-                            <p>There isn’t a directly competing solution that directly challenges the platform we’ve built. However, there are two mainly partially competing solutions - we say they partially compete because they’re not built for the exact same purpose that our platform is. </p>
-                            <br>
-                                   <b>1.  Network of Innovators</b>
-                            <p>Network of Innovators (NoI - networkofinnovators.org) is a site for geodata analysts, researchers, academics, and the general populace, that allows for discussion of geodata and is specifically dedicated to this purpose. There is nothing preventing users from uploading analysis files in commonly used, non-specialist formats (e.g. Word Documents, PDF, etc), however, the fact that it’s not integrated with an analysis engine, limits the extent to which complex analyses can be shared and discussed. To summarise, the main appealing feature of Network of Innovators is its’ forum discussion facility. </p>
-                            <br>
-                                   <b>2.  Jupyter Notebook Analysis Engine</b>
-                            <p>The Jupyter Notebook Analysis Engine allows users to upload a variety of data in multiple formats, and analyses that data to produce an output analysis file, which the user is free to utilise by sharing, editing, and so on. However, this is very individual as no official collaboration and sharing feature is present. To summarise, the main appealing feature of Jupyter Notebook is the fact that it allows for data analysis.</p> 
-                            <br><br>
-                            
-                            <h2 id="solution">Our Solution</h2> 
-                            <p>Our Web Platform, as specified by the given client requirements, integrates the Jupyter Notebook Analysis Engine together with a fully-functional forum that incorporates the full spectrum of features that NoI provide with their forum, as well as direct integration with the analysis engine to share analysis results seamlessly onto the forum. </p>
-                            <br><br>
-                            
-                            <h2 id="features">Product Features</h2>
-                            <p>The features of our product can be summarised as follows:</p>
-                            <br>
-                            <ol>
-                            <li> Inclusion and integration of the <b>Jupyter Notebook Engine</b> inside the <b>Expert Facility</b></li>
-                            <li> Inclusion and integration of a customized <b>CKAN</b> instance inside the <b>Expert Facility</b></li>
-                            <li> Development and inclusion of the <b>Forum facility</b> </li>
-                            <li> Powerful and reliable <b>search</b> functionality to query users and discussion topics and the same time </li>
-                            <li> Users can define their own <b>tags</b> to define their <b>subjects of interest</b> so that they can network better </li>
-                            </ol>
-                            <br><br>
-                            
-                            <h2 id="demo">Video Demo</h2>
-                            <p>This will be the final demo</p>
-                            
-                            <br><br>
-                            <h2 id="team">The team behind</h2>
-                            <br><br>
-                             <div class="post-full-width">
-                            <script>
-                                var slider1_speed = "500";
-                                var slider1_auto = "true";
-                                var slider1_pagination = "true";
-                                var slider1_hover = "true";
-                            </script>
-                            <div class="image-slider-wrapper">
-                                <div class="caroufredsel_wrapper">
-                                    <ul id="slider1" class="image-slider slides center-text">
-                                        <li><img src="images/team/dragos.jpg" style="height: 500px;" alt=""><br><h6>Dragos Popa</h6><b>Team Lider</b><br>Programmer, Client Liaison, UI Design, Tester<br>dragos.popa.16@ucl.ac.uk</li>
-                                        <li><img src="images/team/suhayb.jpg" style="height: 500px;" alt=""><br><h6>Suhayb Hirsi</h6>Researcher, UI Design, Programmer<br>suhayb.hirsi.16@ucl.ac.uk</li>
-                                        <li><img src="images/team/farook.jpg" style="height: 500px;" alt=""><br><h6>Farook Dean</h6>Researcher, Report Editor<br>farook.dean.15@ucl.ac.uk</li>
-                                    </ul>
-                                </div>
-                                <div class="slider1_pagination carousel_pagination left"></div>
-                                <div class="clear"></div>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
+                        <h5>Architecture Design </h5>
+                        <p>The system consists of multiple parts, linked together to form the web platform. The user accesses the web platform through their web browser, which then activates the verification process in the form of LDAP authentication, which communicates with the PostgreSQL Database, serving content managed by Drupal in the web browser. This is all managed by the Apache Server, hosted on the Urban Dynamics Lab Ubuntu server. The client, if they so wish, can then access the analysis engines via communicating with external servers on which CKAN and Jupyter Notebook are hosted, and accessed through the Expert Facility page of the Web Platform.</p> 
+
+                        <p>The advantage of this approach is that it’s very lightweight - we aren’t required to host the CKAN instance on the UDL server, accessible through a redirect, meaning that the Apache Server is solely responsible for loading the web platform. However, the disadvantage is that we do have to host the Jupyter Notebook. This would perhaps be more efficient if we hosted it elsewhere, however the client specifically requested that we host the Jupyter Notebook setup on the UDL server. </p>
+
+                        <p>At the moment, the site is only accessible over the Eduroam network via Port 443; the system’s components could have been integrated into a package that could be delivered from a single external web server, thereby making it easier to access externally - both for students and for actual, real users. </p>
+
+                        <h5>User Interface</h5>
+                        <p>The application’s UI is fairly simple to use, intuitive, and clear. There are various aspects of the UI: </p>
+                        <ol>
+                        <li>
+                        Search function - users are able to search for specific analysis results, profiles of users, and forum posts in a quick and accurate way. However, we could have implemented a standard dropdown in order to preview results, to save time for the user and add a nice touch. 
+                        </li>
+                        <li>Menu function - the menu is displayed on the left sidebar of every page, and is user-responsive - when you hover the mouse pointer over an icon, it displays a shadow and each icon is very clear in what it represents pictorially (a house for the home button, magnifying glass for search tool, speech bubble for the forum, etc)</li>
+                        <li>Login form - the login form is a standard, simple one, prompting the user to enter their username and password, create a new account, and request a new password. This is a simple, easy to use piece of functionality, that doesn’t deviate from any standard norms, supported by the Postfix module. </li>
+                        <li>Forum - the forum layout has been made clear and easy-to-read, and isn’t very complicated for the vast majority of users. Threads and comments are displayed in an accessible fashion. </li>
+                        <li>Accessibility - we’ve tested the web platform on a number of devices including different computers (both Mac and PC setups), and multiple mobile devices running different operating systems and web browsers. Across all of these, our web platform performs highly and adjusts well to different screen sizes, and resolutions (for users with sight difficulties).
+                        </li></ol>
+                        <br>
+                        <h2 id="functionality">Functionality</h2>
+                        <p>The web platform is cross-browser compatible, and scales well to different screen sizes and resolutions.</p>
+
+                        <p>Navigation around the website is simple and smooth, and the main web platform features are easy to find.</p>
+
+                        <p>The Jupyter Notebook and CKAN functionalities are integrated, and are fully functional - though we had no part in developing them intrinsically (apart from redeploying the CKAN instance after some shared environemnt issues). The user menu / functionality for this works highly efficient - a simple, two-button choice screen prompting the user to pick either analysis engine.</p>
+
+                        <p>The search function allows users to search through posts, users and forums efficiently and quickly. In terms of <i>Future Development</i>, the team considers that it would be important to link the CKAN storage to the platform search, so that users can easily browse between discussions and datasets. This was one of the requirements of the client, but unfortunately they only made this clear one week before the deadline and left us with too little time to add this feature.</p>
+                        <br>
+                        <h2 id="stability">Stability </h2>
+
+                        <p>The web platform is directly derived and dependent on the Urban Dynamics Lab Ubuntu server on which the solution is hosted. Everything accessible within the delivered website (i.e. the orchestration server  managing Drupal, the PostgreSQL database, the CKAN instance and its own PostgreSQL database , as well as the Jupyter Notebook setup) is located on the server. Outside any hardware problems coming from the main server, there is no expected instability issue as the Apache2 instance is designed to support a traffic way beyond the expected amount. In case there is a unforseen traffic at any point, there could be a mirroring stack fired up and Apache could server as a load balancing service between them.</p>
+
                         </div>
                     </div>
                     <div class="clear"></div>
