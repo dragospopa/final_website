@@ -77,13 +77,10 @@
                 </div>
                 <div class="social-holder">
                     <div class="social-list">
-                        <a href="#client"><i class="fa fa-user"></i></a>
-                        <a href="#abstract"><i class="fa fa-exclamation-triangle"></i></a>
-                        <a href="#current"><i class="fa fa-flag-checkered"></i></a>
-                        <a href="#solution"><i class="fa fa-check-square"></i></a>
-                        <a href="#features"><i class="fa fa-wrench"></i></a>
-                        <a href="#demo"><i class="fa fa-play"></i></a>
-                        <a href="#team"><i class="fa fa-users"></i></a>
+                        <a href="#homepage">Landing Page</a>
+                        <a href="#search">Search</a>
+                        <a href="#forum">Forum</a>
+                        <a href="#ef">Expert Facility</a>
                     </div>
                 </div>
                 <div class="fixed scroll-top"><i class="fa fa-caret-square-o-up" aria-hidden="true"></i></div>
@@ -112,72 +109,50 @@
                     <div class="entry-content">
                             
                         <div class="content-wrap content-860 center-relative ">
-                            <h2 id="client">The Client</h2>
-                            
-                            <p class="wrap-blockquote"> Our project client is the Urban Dynamics Lab, a group within UCL consisting of researchers from the Department of Computer Science, Department of Geography, and the UCL Bartlett. Our project supervisors are Prof. Michal Galas and Dr. Zeynep Engin, both from the Department of Computer Science and the Urban Dynamics Lab.</p>
-                            
-                            <p> We’ve been in constant contact with them, both through weekly meetings, and email interaction, to seek advice and support throughout the project, specifically with how the requirements are to be understood and also any problems we faced with regards to implementing them.</p>
-                            
-                            <p> Thus, both acted as our main point-of-call for technical support, alongside our peers working on similar projects (since there are four project groups in our year and the year above working with UDL), and online resources such as Stack Overflow.</p>
-                            <br><br>
-                            <h2 id="abstract"> Abstract and Problem </h2>
-                            <p>UCL is a global leader in various disciplines; two of these are Computer Science and Geography, with the Urban Dynamics Lab (UDL) resulting from these. UDL is a research centre for Urban Data analysis, bringing together researchers from both disciplines to collaborate on data analysis of maps, spatial data, waypoints, routes and various other types of geodata.</p>
+                        <p>This represents the User Manual for the Urban Dynamics Lab Web Platform. It consists of a detailed guide explaining the various aspects and pages of the Web Platform to users, appended to annotated screenshots of each page, for added clarity.
+                         </p>
+                        
+                        <p>Our site consists of six main pages:</p>
+                        <ol>
+                        <li>Homepage</li>
+                        <li>Password Reset Page*</li>
+                        <li>Create New Account Page**</li>
+                        <li>Search Page</li>
+                        <li>Forum Page</li>
+                        <li>Expert Facility Page</li>
+                        </ol>
+                        <p>*Note that 2 and 3 are only accessible from the Homepage, or when a User hasn’t logged in – in which case they are accessible from every page. In practice, however, users generally deal with logging in at the home page, hence why they’re both listed as subpages of the homepage.</p>
+                        <br>
+                        <h2 id="homepage">Landing Page</h2>
+                        <p>Users are always initially landed onto the Home Page, which consists of the following:</p>
+                        <ol>
+                        <li>Menu - a menu down the left side of the interface, consisting of four buttons: Home (which redirects the user to the same page / refreshes the page), Search (which takes the user to the search facility), Forum (outline of a speech bubble - which takes the user to the forum facility), and Expert Facility (location icon - takes the user to the page where they’re prompted to choose between CKAN and Jupyter). </li>
+                        <li>User Login -the user login form located adjacent to the Menu, prompting the user to fill in their details (username and password), and then submit using the login button. Alternatively, there are links to sub-functionalities (create new account, request new password). “Create new account”, provides the user with access to a form requesting their basic details, upon submission, they can immediately access their newly-made account. “Request new password” prompts the user for their email address, so that a new password can be emailed to them. </li>
+                        <li>Highlights slideshow - the highlights slideshow in the top portion of the main content area, shows a number of concepts/ideas related to UDL . For example, we’ve placed sample data analysis visualisations there, alongside various images related to UDL’s aims and interests e.g. Big Data. </li>
+                        <li>About UDL and How To Use section - the bulk of the main content area is taken up by content giving a brief background of what UDL aims to accomplish and background about the Research Group, as well as an introduction to the web platform and what is available on the web platform. </li></ol>
+                        <br>
+                        <h2 id="search">Search Page</h2>
+                        <p>From the Search Page, the following are available:</p>
+                        <ol>
+                        <li>Menu -a menu down the left side of the interface, consisting of four buttons: Home (which redirects the user to the same page / refreshes the page), Search (which takes the user to the search facility), Forum (outline of a speech bubble - which takes the user to the forum facility), and Expert Facility (location icon - takes the user to the page where they’re prompted to choose between CKAN and Jupyter). </li>
+                        <li>User Login - the user login form located adjacent to the Menu, prompting the user to fill in their details (username and password), and then submit using the login button. Alternatively, there are links to sub-functionalities (create new account, request new password). “Create new account”, provides the user with access to a form requesting their basic details, upon submission, they can immediately access their newly-made account. “Request new password” prompts the user for their email address, so that a new password can be emailed to them. </li>
+                        <li>Search Facility - the search facility is simple, the user simply enters whatever they’d like to search for into the search bar, and then presses “Apply”. This returns the full range of results for that particular search term. If the results span more than a page, then there are multiple results pages, accessible from the bottom of the results.</li></ol>
+                        <br>
+                        <h2 id="forum">Forum </h2>
+                        <p>When a user views the forum, the following is available:</p><ol>
 
-                            <p>Currently, no single platform exists that brings together (a) an engine for analysing geodata and (b) a discussion facility/forum for analysts to discuss said data and analyses. Separate platforms and engines do exist, but there is growing demand from researchers for these to be brought together. Integrating these together into a single platform - a new Web Platform for the UDL - is thus the main challenge making up the bulk of our project.</p>
-                            <br><br>
-                            
-                            <h2 id="current">Other Current Solutions</h2> 
-                            <p>There isn’t a directly competing solution that directly challenges the platform we’ve built. However, there are two mainly partially competing solutions - we say they partially compete because they’re not built for the exact same purpose that our platform is. </p>
-                            <br>
-                                   <b>1.  Network of Innovators</b>
-                            <p>Network of Innovators (NoI - networkofinnovators.org) is a site for geodata analysts, researchers, academics, and the general populace, that allows for discussion of geodata and is specifically dedicated to this purpose. There is nothing preventing users from uploading analysis files in commonly used, non-specialist formats (e.g. Word Documents, PDF, etc), however, the fact that it’s not integrated with an analysis engine, limits the extent to which complex analyses can be shared and discussed. To summarise, the main appealing feature of Network of Innovators is its’ forum discussion facility. </p>
-                            <br>
-                                   <b>2.  Jupyter Notebook Analysis Engine</b>
-                            <p>The Jupyter Notebook Analysis Engine allows users to upload a variety of data in multiple formats, and analyses that data to produce an output analysis file, which the user is free to utilise by sharing, editing, and so on. However, this is very individual as no official collaboration and sharing feature is present. To summarise, the main appealing feature of Jupyter Notebook is the fact that it allows for data analysis.</p> 
-                            <br><br>
-                            
-                            <h2 id="solution">Our Solution</h2> 
-                            <p>Our Web Platform, as specified by the given client requirements, integrates the Jupyter Notebook Analysis Engine together with a fully-functional forum that incorporates the full spectrum of features that NoI provide with their forum, as well as direct integration with the analysis engine to share analysis results seamlessly onto the forum. </p>
-                            <br><br>
-                            
-                            <h2 id="features">Product Features</h2>
-                            <p>The features of our product can be summarised as follows:</p>
-                            <br>
-                            <ol>
-                            <li> Inclusion and integration of the <b>Jupyter Notebook Engine</b> inside the <b>Expert Facility</b></li>
-                            <li> Inclusion and integration of a customized <b>CKAN</b> instance inside the <b>Expert Facility</b></li>
-                            <li> Development and inclusion of the <b>Forum facility</b> </li>
-                            <li> Powerful and reliable <b>search</b> functionality to query users and discussion topics and the same time </li>
-                            <li> Users can define their own <b>tags</b> to define their <b>subjects of interest</b> so that they can network better </li>
-                            </ol>
-                            <br><br>
-                            
-                            <h2 id="demo">Video Demo</h2>
-                            <p>This will be the final demo</p>
-                            
-                            <br><br>
-                            <h2 id="team">The team behind</h2>
-                            <br><br>
-                             <div class="post-full-width">
-                            <script>
-                                var slider1_speed = "500";
-                                var slider1_auto = "true";
-                                var slider1_pagination = "true";
-                                var slider1_hover = "true";
-                            </script>
-                            <div class="image-slider-wrapper">
-                                <div class="caroufredsel_wrapper">
-                                    <ul id="slider1" class="image-slider slides center-text">
-                                        <li><img src="images/team/dragos.jpg" style="height: 500px;" alt=""><br><h6>Dragos Popa</h6><b>Team Lider</b><br>Programmer, Client Liaison, UI Design, Tester<br>dragos.popa.16@ucl.ac.uk</li>
-                                        <li><img src="images/team/suhayb.jpg" style="height: 500px;" alt=""><br><h6>Suhayb Hirsi</h6>Researcher, UI Design, Programmer<br>suhayb.hirsi.16@ucl.ac.uk</li>
-                                        <li><img src="images/team/farook.jpg" style="height: 500px;" alt=""><br><h6>Farook Dean</h6>Researcher, Report Editor<br>farook.dean.15@ucl.ac.uk</li>
-                                    </ul>
-                                </div>
-                                <div class="slider1_pagination carousel_pagination left"></div>
-                                <div class="clear"></div>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
+                        <li>Menu -a menu down the left side of the interface, consisting of four buttons: Home (which redirects the user to the same page / refreshes the page), Search (which takes the user to the search facility), Forum (outline of a speech bubble - which takes the user to the forum facility), and Expert Facility (location icon - takes the user to the page where they’re prompted to choose between CKAN and Jupyter). </li>
+                        <li>User Login - the user login form located adjacent to the Menu, prompting the user to fill in their details (username and password), and then submit using the login button. Alternatively, there are links to sub-functionalities (create new account, request new password). “Create new account”, provides the user with access to a form requesting their basic details, upon submission, they can immediately access their newly-made account. “Request new password” prompts the user for their email address, so that a new password can be emailed to them. </li>
+                        <li>Search Facility - the search facility is simple, the user simply enters whatever they’d like to search for into the search bar, and then presses “Apply”. This returns the full range of results for that particular search term. If the results span more than a page, then there are multiple results pages, accessible from the bottom of the results.
+                        <li>Forum Threads - here, the user is able to view all currently active threads, together with the replies for each, and the profiles of who has commented. </li>
+                        (When logged in) - the user has the option to create new threads, edit existing ones,and deleting ones they’ve previously made, as well as commenting on other people’s threads. </li></ol>
+                        <br>
+                        <h2 id="ef">Expert Facility </h2>
+
+                        <p>In terms of the Expert Facility, there are 2 links redirecting users to either the data management system or the analysis engine (as stated in the view). No matter the permissions given to a visitor, they should all be able to get to either of them - both links are redirecting outside the scope of the platform as these services are standalone applications.</p>
+
+                        <img src="images/content/ef-view.png" alt="">
+
                         </div>
                     </div>
                     <div class="clear"></div>
