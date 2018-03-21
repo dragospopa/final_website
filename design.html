@@ -83,6 +83,7 @@
                         <a href="#operations">Operations</a>
                         <a href="#module">Module Customization</a>
                         <a href="#theme">Theme Customization</a>
+                        <a href="#ldap">LDAP Server</a>
                     </div>
                 </div>
                 <div class="fixed scroll-top"><i class="fa fa-caret-square-o-up" aria-hidden="true"></i></div>
@@ -234,8 +235,8 @@
                     <h2 id="ldap">Lightweight Directory Access Protocol (LDAP)</h2>
                     <p>Lightweight Directory Access Protocol (LDAP) is an open, industry standard and popular means of accessing information stored in a directory server. LDAP offers a number of functionality like automatically encoding encrypted passwords using encryption methods like MD5, they are stored in a way that makes it easy to authenticate users while making it very difficult to determine what their clear-text credentials really are. Another functionality it offers, is support for numerous password policy features like password expiration, password quality validation, and account-block from too many failed attempts. Finally, all LDAP servers like the one we have used as explained below offer some kind of backup and restore mechanism, while supporting exporting data in the standard LDIF format that can be read by other LDAP servers, which was helpful as we originally created our LDAP scheme using Apache Directory Studio then exported the scheme in a LDIF format to our deployed instances. Our scheme looks as follows.</p>
 
-                    <img src="" alt"">
-                    
+                    <img src="images/content/ldappic.png" style="height: 500px;width:900px" alt"">
+
                     <br></br>
                     <p>We had a choice of two LDAP servers to choose from, OpenLDAP and Apache Directory Server(ApacheDS). While both are sufficient for our project we used ApacheDS. The reason for this, is OpenLDAP doesn’t come with many tools that support managing the server, most of configuration is done through the command line using LDIF’s. However, ApacheDS comes with Apache Directory Studio which has a collection of server management tools to configure our server, hence managing our LDAP instance is far easier. Another advantage of Apache Directory Server is the ability to run stored procedures and triggers in the LDAP database. This again helps our LDAP administrator to have more control over the database and maintenance/management tasks.</p>
 
