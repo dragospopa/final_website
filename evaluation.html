@@ -108,7 +108,7 @@
                     </div>
 
                     <div class="entry-content">
-                            
+
                         <div class="content-wrap content-860 center-relative ">
                         <h2 id="achievements">Achievements </h2>
                         <ol>
@@ -116,21 +116,21 @@
                         </li>
                         <li>We successfully achieved a look-and-feel praised by our clients - since they did specify that they wanted a look-and-feel similar to that provided by Network of Innovators (NoI - networkofinnovators.org)
                         </li></ol>
-                        
+
                         <p>The final requirements and their completion states are summarised in the requirements evaluation table below. </p>
                         <br>
                         <h2 id="further">Further Development</h2>
                         <p>To further develop our Web Platform, in hindsight, we identified a number of areas that could be improved and added. They are listed below, beginning with the requirements that we didn’t manage to implement: </p>
                         <ol><li>
                         Firstly, to implement functionality for unique link referencing between threads, so that users can efficiently share links to analyses, without needing to worry about cross-referencing of links. </li>
-                        <li>Thirdly, to implement the site in Drupal 8. This is for increased shelf-life of the product, as Drupal 7 has been around for a long time and will likely be phased out much quicker than Drupal 8, meaning it will become harder to maintain and so on. However, due to the constrained time limit for this project (over two terms - one of planning and one of development), meant that we weren’t really able to get to grips with Drupal 8 in time - especially as it’s new and doesn’t have a well-established support base like Drupal 7.</li> 
+                        <li>Thirdly, to implement the site in Drupal 8. This is for increased shelf-life of the product, as Drupal 7 has been around for a long time and will likely be phased out much quicker than Drupal 8, meaning it will become harder to maintain and so on. However, due to the constrained time limit for this project (over two terms - one of planning and one of development), meant that we weren’t really able to get to grips with Drupal 8 in time - especially as it’s new and doesn’t have a well-established support base like Drupal 7.</li>
                         <li>The CKAN database and the one that supports the platform could be merged so that the search would be able to retrieve information stored on there, as well. Due to the fact that the client has made it clear that they would like to have this too late in the development process, we were unable to extend the search scope on time.
                         </li></ol>
                         <br>
                         <h2 id="critical">Critical Evaluation </h2>
 
                         <h5>Architecture Design </h5>
-                        <p>The system consists of multiple parts, linked together to form the web platform. The user accesses the web platform through their web browser, which then activates the verification process in the form of LDAP authentication, which communicates with the PostgreSQL Database, serving content managed by Drupal in the web browser. This is all managed by the Apache Server, hosted on the Urban Dynamics Lab Ubuntu server. The client, if they so wish, can then access the analysis engines via communicating with external servers on which CKAN and Jupyter Notebook are hosted, and accessed through the Expert Facility page of the Web Platform.</p> 
+                        <p>The system consists of multiple parts, linked together to form the web platform. The user accesses the web platform through their web browser, which then activates the verification process in the form of LDAP authentication, which communicates with the PostgreSQL Database, serving content managed by Drupal in the web browser. This is all managed by the Apache Server, hosted on the Urban Dynamics Lab Ubuntu server. The client, if they so wish, can then access the analysis engines via communicating with external servers on which CKAN and Jupyter Notebook are hosted, and accessed through the Expert Facility page of the Web Platform.</p>
 
                         <p>The advantage of this approach is that it’s very lightweight - we aren’t required to host the CKAN instance on the UDL server, accessible through a redirect, meaning that the Apache Server is solely responsible for loading the web platform. However, the disadvantage is that we do have to host the Jupyter Notebook. This would perhaps be more efficient if we hosted it elsewhere, however the client specifically requested that we host the Jupyter Notebook setup on the UDL server. </p>
 
@@ -140,7 +140,7 @@
                         <p>The application’s UI is fairly simple to use, intuitive, and clear. There are various aspects of the UI: </p>
                         <ol>
                         <li>
-                        Search function - users are able to search for specific analysis results, profiles of users, and forum posts in a quick and accurate way. However, we could have implemented a standard dropdown in order to preview results, to save time for the user and add a nice touch. 
+                        Search function - users are able to search for specific analysis results, profiles of users, and forum posts in a quick and accurate way. However, we could have implemented a standard dropdown in order to preview results, to save time for the user and add a nice touch.
                         </li>
                         <li>Menu function - the menu is displayed on the left sidebar of every page, and is user-responsive - when you hover the mouse pointer over an icon, it displays a shadow and each icon is very clear in what it represents pictorially (a house for the home button, magnifying glass for search tool, speech bubble for the forum, etc)</li>
                         <li>Login form - the login form is a standard, simple one, prompting the user to enter their username and password, create a new account, and request a new password. This is a simple, easy to use piece of functionality, that doesn’t deviate from any standard norms, supported by the Postfix module. </li>
@@ -160,6 +160,25 @@
                         <h2 id="stability">Stability </h2>
 
                         <p>The web platform is directly derived and dependent on the Urban Dynamics Lab Ubuntu server on which the solution is hosted. Everything accessible within the delivered website (i.e. the orchestration server  managing Drupal, the PostgreSQL database, the CKAN instance and its own PostgreSQL database , as well as the Jupyter Notebook setup) is located on the server. Outside any hardware problems coming from the main server, there is no expected instability issue as the Apache2 instance is designed to support a traffic way beyond the expected amount. In case there is a unforseen traffic at any point, there could be a mirroring stack fired up and Apache could server as a load balancing service between them.</p>
+                        <br>
+                        <h2 id="stability">Stability </h2>
+                        <table class="tableizer-table">
+                        <thead><tr class="tableizer-firstrow"><th>Requirement Description  </th><th>Dragos</th><th>Farooq</th><th>Suhayb</th></tr></thead><tbody>
+                         <tr><td>Client Liaison</td><td>80</td><td>10</td><td>10</td></tr>
+                         <tr><td>Requirements Analysis</td><td>34</td><td>33</td><td>33</td></tr>
+                         <tr><td>Research</td><td>40</td><td>20</td><td>40</td></tr>
+                         <tr><td>UI Design</td><td>15</td><td>70</td><td>15</td></tr>
+                         <tr><td>Frontend development</td><td>65</td><td>15</td><td>20</td></tr>
+                         <tr><td>Backend development</td><td>60</td><td>5</td><td>35</td></tr>
+                         <tr><td>Testing</td><td>50</td><td>0</td><td>50</td></tr>
+                         <tr><td>Bi-weekly Reports</td><td>5</td><td>90</td><td>5</td></tr>
+                         <tr><td>Project Website</td><td>40</td><td>50</td><td>10</td></tr>
+                         <tr><td>Poster Design</td><td>5</td><td>90</td><td>5</td></tr>
+                         <tr><td>Video Editing</td><td>33</td><td>33</td><td>34</td></tr>
+                         <tr><td>Overall Contribution</td><td>40</td><td>26</td><td>34</td></tr>
+                         <tr><td>Main Roles(max three)</td><td>Frontend Dev, Backend Dev, Researcher</td><td>Frontend Dev, Report Editior, UI Designer</td><td>Tester, Backend Dev, Researcher</td></tr>
+                        </tbody></table>
+
 
                         </div>
                     </div>
