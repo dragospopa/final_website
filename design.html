@@ -143,7 +143,7 @@
                     <img src="images/content/forumpage.jpg" alt="">
 
                     <h5>Prototype #3 </h5>
-                    <p>This prototype was developed as a stark alternative to Prototype #2, taking a radically different, more minimalistic approach to the UI design. It involved some very noticeable structure changes
+                    <p>This prototype was developed as a stark alternative to Prototype #2, taking a radically different, more minimalistic approach to the UI design<sup>15</sup>. It involved some very noticeable structure changes
                     Complete change of location for the menu bar - the menu bar is now displayed down the side of the page, rather than across the top. This was a suggestion from our clients, who encouraged us to experiment and assess the outcome.
                     Latest Forum Updates area is now located in the top left, with the Login and Signup buttons occupying the same area as Prototype #2
                     Search bar has moved downwards, to below the Latest Forum Updates.
@@ -171,7 +171,7 @@
                     <h2 id="implementation">Implementation</h2>
                     <h3 id="architecture">Architecture Design</h3>
 
-                    <p>The entire system is currently relying on the Ubuntu 14.04 Server that has been provided by the UCL Computer Science department. This is a shared environment which serves other services related to the Urban Dynamics Lab (data management system, data analysis engine and background pipelines to support them). The team has created a custom LAPP (abbreviation from Linux, Apache, PostgreSQL and PHP) (https://www.turnkeylinux.org/lapp) stack that the team has generated in order to host the project. Due to the fact that this is a custom development server and as request by our client, the server is only reachable from within the UCL network (Eduroam) and the client will be able to open access from anywhere by asking the server administrator to change the firewall rules of the network that currently block all ports for traffic coming from outside of UCL.</p>
+                    <p>The entire system is currently relying on the Ubuntu 14.04 Server that has been provided by the UCL Computer Science department. This is a shared environment which serves other services related to the Urban Dynamics Lab (data management system, data analysis engine and background pipelines to support them). The team has created a custom LAPP (abbreviation from Linux, Apache, PostgreSQL and PHP) <sup>16</sup> stack that the team has generated in order to host the project. Due to the fact that this is a custom development server and as request by our client, the server is only reachable from within the UCL network (Eduroam) and the client will be able to open access from anywhere by asking the server administrator to change the firewall rules of the network that currently block all ports for traffic coming from outside of UCL.</p>
 
                     <img src="images/content/lapp.png" alt="" >
 
@@ -225,9 +225,9 @@
                     <h5>Search module</h5>
                     <p>As one of the most important requirements was to create a powerful search that would be able to generate results from both the `users` and `forum topics` tables of the database. As this could have not been achieved with the core Drupal Search module, we had to use the Search API module (https://www.drupal.org/project/search_api) that allowed us to query any column of the tables (in our case, topic titles, account names, account description and account tags) that were stored and return them in a single view. </p>
 
-                    <img src="images/content/search-view.png" alt="" >**SCREENSHOT FROM SEARCH RESULTS PAGE**
+                    <img src="images/content/search-view.png" alt="" >
 
-                    <p>To be more precise, the module created is able to generate its own index in the background based on what the implementation asked it and query directly on that for fast return. This is making use of the Observer Pattern to make the custom search module “listen” / “track”  any account profiles or forum topics being created or updated, triggering an update to the index with that new data.</p>
+                    <p>To be more precise, the module created is able to generate its own index in the background based on what the implementation asked it and query directly on that for fast return. This is making use of the Observer Pattern to make the custom search module “listen” / “track”  any account profiles or forum topics being created or updated, triggering an update to the index with that new data.<sup>17</sup></p>
 
                     <img src="images/content/observer-pattern.png" alt="" >
 
