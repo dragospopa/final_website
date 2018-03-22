@@ -181,6 +181,17 @@
 
                     <img src="images/content/architecture.png" alt="" >
 
+
+                    <h2 id="ldap">Lightweight Directory Access Protocol (LDAP)</h2>
+                    <p>Lightweight Directory Access Protocol (LDAP) is an open, industry standard and popular means of accessing information stored in a directory server. LDAP offers a number of functionality like automatically encoding encrypted passwords using encryption methods like MD5, they are stored in a way that makes it easy to authenticate users while making it very difficult to determine what their clear-text credentials really are. Another functionality it offers, is support for numerous password policy features like password expiration, password quality validation, and account-block from too many failed attempts. Finally, all LDAP servers like the one we have used as explained below offer some kind of backup and restore mechanism, while supporting exporting data in the standard LDIF format that can be read by other LDAP servers, which was helpful as we originally created our LDAP scheme using Apache Directory Studio then exported the scheme in a LDIF format to our deployed instances. Our scheme looks as follows.</p>
+
+                    <img src="images/content/ldappic.png" style="height: 500px;width:900px" alt"">
+
+                    <br></br>
+                    <p>We had a choice of two LDAP servers to choose from, OpenLDAP and Apache Directory Server(ApacheDS). While both are sufficient for our project we used ApacheDS. The reason for this, is OpenLDAP doesn’t come with many tools that support managing the server, most of configuration is done through the command line using LDIF’s. However, ApacheDS comes with Apache Directory Studio which has a collection of server management tools to configure our server, hence managing our LDAP instance is far easier. Another advantage of Apache Directory Server is the ability to run stored procedures and triggers in the LDAP database. This again helps our LDAP administrator to have more control over the database and maintenance/management tasks.</p>
+
+                    <p>Our client insisted we use LDAP for verification and authentication.</p>
+
                     <h2 id="operations">Operations</h2>
 
                    <p> Due to the out-of-the-box design of Drupal, from the very beginning of the development period we have been able to generate a working version of the platform. Due to this, we have decided to adhere to an Agile project management strategy. This means that the first thing to fall in our pipeline was the deployment of the stack - because Drupal allows module development and content management with zero downtime. Due to this, we have been placed in the perfect position where we could have the same production environment mirroring the development one, boosting productivity, as well as time spent on testing.</p>
@@ -231,16 +242,6 @@
                     <p>The theme applied to the website is a custom one created by the team. We have used the Drupal Bootstrap theme (https://www.drupal.org/project/bootstrap)  as a starting point and starting building our own from there. Beside the usual CSS styling done for each page, we have identified 4 types of UI elements that required a new build-up for their php template: blocks (such as the search block), nodes (the template used as homepage and Expert Facility), page (the high-level overall look of the website - top and left menu, as well as login box)  and html (the scripts and styling files that get included in each page).</p>
 
                     <img src="images/content/theme-tree.png" alt="" >
-
-                    <h2 id="ldap">Lightweight Directory Access Protocol (LDAP)</h2>
-                    <p>Lightweight Directory Access Protocol (LDAP) is an open, industry standard and popular means of accessing information stored in a directory server. LDAP offers a number of functionality like automatically encoding encrypted passwords using encryption methods like MD5, they are stored in a way that makes it easy to authenticate users while making it very difficult to determine what their clear-text credentials really are. Another functionality it offers, is support for numerous password policy features like password expiration, password quality validation, and account-block from too many failed attempts. Finally, all LDAP servers like the one we have used as explained below offer some kind of backup and restore mechanism, while supporting exporting data in the standard LDIF format that can be read by other LDAP servers, which was helpful as we originally created our LDAP scheme using Apache Directory Studio then exported the scheme in a LDIF format to our deployed instances. Our scheme looks as follows.</p>
-
-                    <img src="images/content/ldappic.png" style="height: 500px;width:900px" alt"">
-
-                    <br></br>
-                    <p>We had a choice of two LDAP servers to choose from, OpenLDAP and Apache Directory Server(ApacheDS). While both are sufficient for our project we used ApacheDS. The reason for this, is OpenLDAP doesn’t come with many tools that support managing the server, most of configuration is done through the command line using LDIF’s. However, ApacheDS comes with Apache Directory Studio which has a collection of server management tools to configure our server, hence managing our LDAP instance is far easier. Another advantage of Apache Directory Server is the ability to run stored procedures and triggers in the LDAP database. This again helps our LDAP administrator to have more control over the database and maintenance/management tasks.</p>
-
-                    <p>Our client insisted we use LDAP for verification and authentication.</p>
 
                         </div>
                     </div>

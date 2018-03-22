@@ -323,7 +323,7 @@ input, textarea, select
 }
 
 .logo-holder
-{
+{   
     line-height: 0;
     font-size: 0;
 }
@@ -409,7 +409,8 @@ input, textarea, select
 }
 
 .social-list
-{
+{    
+    display: none;
     text-align: center;
     color: #5B5B5B;
     font-size: 10px;
